@@ -537,23 +537,25 @@ aspect-ratio: 409/624;
   }
   
   .about-me__name {
-    font-size: 28px !important;
+    font-size: 20px !important;
     text-align: center !important;
   }
   
   .about-me__bio {
-    font-size: 16px !important;
+    font-size: 14px !important;
     text-align: center !important;
     line-height: 1.5 !important;
     width: 100% !important;
     height: auto !important;
     margin-bottom: 20px !important;
+    position: relative !important;
+    
   }
   
   .about-me__bio .iloveby {
     display: block !important;
   }
-  
+
   .about-me__tools {
     justify-content: center !important;
     flex-wrap: wrap !important;
