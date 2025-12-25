@@ -1,5 +1,11 @@
 /* ===== ABOUT PAGE STYLES ===== */
 
+/* Prevent horizontal scroll on mobile */
+.about-page {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 /* ===== ABOUT HERO (TEMPLE SECTION) ===== */
 .about-hero {
   min-height: 100vh;
@@ -462,18 +468,20 @@ aspect-ratio: 409/624;
   }
   
   .about-me {
-    padding: 60px 20px;
+    padding: 60px 15px;
+    overflow-x: hidden;
   }
   
   .about-me__container {
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
   }
   
   .about-me__image-wrapper {
     flex: none;
     width: 100%;
-    max-width: 280px;
+    max-width: 250px;
     margin: 0 auto;
     position: relative;
   }
@@ -496,7 +504,21 @@ aspect-ratio: 409/624;
   .about-me__image-wrapper {
     display: flex;
     justify-content: center;
-    padding-left: 40px;
+  }
+  
+  .about-me__content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+  }
+  
+  .about-me__bio,
+  .about-me__covenant-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   
   .about-me__label {
