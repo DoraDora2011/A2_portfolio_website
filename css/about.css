@@ -510,6 +510,11 @@ aspect-ratio: 409/624;
   
   .about-me__bio {
     font-size: 18px;
+    text-align: center;
+  }
+  
+  .about-me__content {
+    text-align: center;
   }
   
   .about-me__tools {
@@ -521,12 +526,18 @@ aspect-ratio: 409/624;
     height: 50px;
   }
   
+  .about-me__covenant {
+    text-align: center;
+  }
+  
   .about-me__covenant-title {
-    font-size: 32px;
+    font-size: 28px;
+    text-align: center;
   }
   
   .about-me__covenant-text {
     font-size: 16px;
+    text-align: center;
   }
   
   .about-contact__container {
