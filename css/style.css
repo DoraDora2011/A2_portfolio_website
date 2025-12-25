@@ -412,10 +412,10 @@ line-height: normal;
   font-size: 33px;
   color: var(--color-cyan);
   padding: 0 10px;
-  opacity: 0.4;
+  opacity: 0.6;
   transform: scaleY(-1);
   display: block;
-  filter: blur(1.5px);
+  filter: blur(0.8px);
   position: relative;
   top: -19px;
   line-height: 1.2;
@@ -888,6 +888,20 @@ body {
   
   .hero__title .italic {
     font-size: 56px;
+  }
+  
+  .hero__lotus {
+    width: 120px;
+    bottom: auto;
+    top: 60%;
+    right: 5%;
+    z-index: 0;
+  }
+  
+  .hero__lotus--small {
+    width: 80px;
+    right: 25%;
+    top: 75%;
   }
   
   .philosophy {

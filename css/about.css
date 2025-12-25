@@ -448,26 +448,34 @@ aspect-ratio: 409/624;
 
 @media (max-width: 768px) {
   .about-hero__title {
-    font-size: 36px;
-    padding: 0 20px;
+    font-size: 24px;
+    padding: 0 15px;
+    max-width: 200px;
   }
   
   .about-hero__scrolling-text {
-    font-size: 24px;
+    font-size: 18px;
   }
   
   .about-hero__bamboo {
-    width: 150px;
+    width: 100px;
   }
   
   .about-me {
     padding: 60px 20px;
   }
   
+  .about-me__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
   .about-me__image-wrapper {
     flex: none;
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    margin: 0 auto;
+    position: relative;
   }
   
   .about-me__photo {
@@ -477,14 +485,15 @@ aspect-ratio: 409/624;
   }
   
   .about-me__frame {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   
   .about-me__flower {
-    width: 80px;
-    top: -40px;
-    right: -150px;
+    width: 60px;
+    top: -20px;
+    left: -10px;
+    right: auto;
   }
   
   .about-me__label {
@@ -532,9 +541,14 @@ aspect-ratio: 409/624;
   }
   
   .about-contact__item {
-    font-size: 16px;
+    font-size: 14px;
     flex-direction: column;
     gap: 5px;
+    word-break: break-word;
+  }
+  
+  .about-contact__item a {
+    word-break: break-all;
   }
   
   .about-contact__dragon {
