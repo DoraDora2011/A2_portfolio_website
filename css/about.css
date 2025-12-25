@@ -398,20 +398,7 @@ aspect-ratio: 409/624;
     
 }
 
-.about-contact__item-link {
-    color: #000;
-    font-family: Inter;
-    font-size: 28px;
-    font-style: italic;
-    font-weight: 50;
-    line-height: normal;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: auto;
-    text-underline-offset: auto;
-    text-underline-position: from-font;
-}
+
 .about-contact__item strong {
   font-weight: 600;
 }
