@@ -490,10 +490,12 @@ aspect-ratio: 409/624;
   }
   
   .about-me__flower {
-    width: 60px;
-    top: -20px;
-    left: -10px;
-    right: auto;
+    display: none;
+  }
+  
+  .about-me__image-wrapper {
+    display: flex;
+    justify-content: center;
   }
   
   .about-me__label {
