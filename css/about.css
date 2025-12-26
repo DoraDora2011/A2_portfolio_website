@@ -84,7 +84,7 @@
   font-family: var(--font-pixel);
   font-size: 48px;
   opacity: 0.6;
-  z-index: 3;
+  z-index: 1;
   animation: scrollText 30s linear infinite;
 }
 

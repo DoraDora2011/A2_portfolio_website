@@ -328,6 +328,7 @@
 }
 
 .gallery__category:hover {
+  opacity: 1;
   animation: buttonGlow 1.5s ease-in-out infinite;
 }
 
