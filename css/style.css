@@ -926,7 +926,40 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+/* Tablet uses desktop layout with adjustments */
+@media (max-width: 1024px) and (min-width: 577px) {
+  .header {
+    padding: 15px 40px;
+  }
+  
+  .hero__content {
+    padding: 0 40px;
+    padding-top: 150px;
+  }
+  
+  .hero__welcome {
+    font-size: 64px;
+  }
+  
+  .hero__title {
+    font-size: 72px;
+  }
+  
+  .philosophy {
+    padding: 80px 40px;
+  }
+  
+  .gallery-preview__slider {
+    padding: 0 40px;
+  }
+  
+  .footer {
+    padding: 60px 40px 30px;
+  }
+}
+
+/* Mobile only - below 576px */
+@media (max-width: 576px) {
   .header {
     padding: 15px 20px;
   }

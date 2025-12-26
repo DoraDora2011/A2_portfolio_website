@@ -483,7 +483,23 @@ aspect-ratio: 409/624;
   }
 }
 
-@media (max-width: 768px) {
+/* Tablet uses desktop layout */
+@media (max-width: 1024px) and (min-width: 577px) {
+  .about-hero {
+    padding-top: 120px;
+  }
+  
+  .about-me {
+    padding: 80px 40px;
+  }
+  
+  .about-contact {
+    padding: 60px 40px;
+  }
+}
+
+/* Mobile only */
+@media (max-width: 576px) {
   .about-hero__title {
     font-size: 24px !important;
     padding: 0 15px !important;
