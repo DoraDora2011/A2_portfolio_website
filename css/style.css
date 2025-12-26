@@ -26,6 +26,11 @@
   --content-max-width: 1600px;
 }
 
+/* Reduce font-weight globally for pixel font */
+[class*="__"] {
+  font-weight: 400;
+}
+
 /* ===== RESET ===== */
 *, *::before, *::after {
   margin: 0;
@@ -281,7 +286,7 @@ ul {
     font-family: Handjet;
     font-size: 64px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
 }
 
@@ -301,7 +306,7 @@ line-height: normal;
     font-family: Handjet;
     font-size: 128px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
     
     

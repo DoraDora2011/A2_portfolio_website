@@ -270,7 +270,7 @@ aspect-ratio: 409/624;
     font-family: Handjet;
     font-size: 48px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
     padding-bottom: 20px;
 }
@@ -281,7 +281,7 @@ aspect-ratio: 409/624;
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
 }
 
@@ -345,7 +345,7 @@ aspect-ratio: 409/624;
     font-family: Handjet;
     font-size: 48px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
     padding-bottom: 20px;
 }
@@ -403,7 +403,7 @@ aspect-ratio: 409/624;
     font-family: Handjet;
     font-size: 48px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
     padding-bottom: 15px;
 }
@@ -438,7 +438,7 @@ aspect-ratio: 409/624;
 
 
 .about-contact__item strong {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .about-contact__item a {
@@ -450,7 +450,7 @@ aspect-ratio: 409/624;
   margin-top: 30px;
   font-family: var(--font-serif);
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color-black);
 }
 
