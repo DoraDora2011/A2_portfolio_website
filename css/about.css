@@ -49,6 +49,7 @@
 
 .about-hero__temple {
   position: relative;
+  bottom: -50px;
   z-index: 5;
   width: 100%;
   max-width: 1895px;
@@ -73,28 +74,26 @@
   font-family: var(--font-pixel);
   font-size: 72px;
   color: var(--color-white);
-  text-shadow: 0 0 30px rgba(138, 43, 226, 0.8);
   line-height: 1.2;
-  animation: titleGlow 3s ease-in-out infinite;
+  animation: titleColorFlicker 4s ease-in-out infinite;
 }
 
-/* Subtle color flicker animation for title */
-@keyframes titleGlow {
+/* Subtle color change animation for title - no glow */
+@keyframes titleColorFlicker {
   0%, 100% {
-    color: var(--color-white);
-    text-shadow: 0 0 30px rgba(138, 43, 226, 0.8);
+    color: #ffffff;
   }
-  25% {
-    color: #fff5f5;
-    text-shadow: 0 0 35px rgba(255, 0, 255, 0.6), 0 0 60px rgba(138, 43, 226, 0.4);
+  20% {
+    color: #ffccff; /* Light pink */
   }
-  50% {
-    color: #f5f5ff;
-    text-shadow: 0 0 40px rgba(0, 206, 209, 0.5), 0 0 70px rgba(173, 255, 47, 0.3);
+  40% {
+    color: #ccffff; /* Light cyan */
   }
-  75% {
-    color: #fff8f0;
-    text-shadow: 0 0 35px rgba(253, 85, 148, 0.6), 0 0 60px rgba(138, 43, 226, 0.4);
+  60% {
+    color: #ffffcc; /* Light yellow */
+  }
+  80% {
+    color: #ccffcc; /* Light green */
   }
 }
 

@@ -294,70 +294,10 @@ function initActiveNavLink() {
 
 
 // ===== CUSTOM CURSOR EFFECT =====
+// Disabled - using p5.js flower cursor from cursor.js instead
 function initCustomCursor() {
-  // Don't init on touch devices
-  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-    return;
-  }
-
-  // Create cursor elements
-  const cursor = document.createElement('div');
-  cursor.className = 'cursor';
-  document.body.appendChild(cursor);
-
-  const cursorDot = document.createElement('div');
-  cursorDot.className = 'cursor-dot';
-  document.body.appendChild(cursorDot);
-
-  let mouseX = 0, mouseY = 0;
-  let cursorX = 0, cursorY = 0;
-  let dotX = 0, dotY = 0;
-
-  // Track mouse position
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  // Hover effect on interactive elements
-  const hoverElements = document.querySelectorAll('a, button, .gallery-preview__project, .gallery__item, .project__tool');
-  hoverElements.forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
-  });
-
-  // Click effect
-  document.addEventListener('mousedown', () => cursor.classList.add('cursor--click'));
-  document.addEventListener('mouseup', () => cursor.classList.remove('cursor--click'));
-
-  // Hide when leaving window
-  document.addEventListener('mouseleave', () => {
-    cursor.style.opacity = '0';
-    cursorDot.style.opacity = '0';
-  });
-  document.addEventListener('mouseenter', () => {
-    cursor.style.opacity = '1';
-    cursorDot.style.opacity = '0.6';
-  });
-
-  // Animate cursor
-  function animateCursor() {
-    // Main cursor follows with slight delay
-    cursorX += (mouseX - cursorX) * 0.15;
-    cursorY += (mouseY - cursorY) * 0.15;
-    cursor.style.left = `${cursorX}px`;
-    cursor.style.top = `${cursorY}px`;
-
-    // Dot follows with more delay for trail effect
-    dotX += (mouseX - dotX) * 0.08;
-    dotY += (mouseY - dotY) * 0.08;
-    cursorDot.style.left = `${dotX}px`;
-    cursorDot.style.top = `${dotY}px`;
-
-    requestAnimationFrame(animateCursor);
-  }
-
-  animateCursor();
+  // Flower cursor is handled by cursor.js
+  return;
 }
 
 
