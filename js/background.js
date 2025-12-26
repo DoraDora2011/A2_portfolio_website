@@ -128,15 +128,21 @@ const backgroundSketch = (p) => {
   };
 };
 
-// Only initialize if container exists
-if (document.getElementById("bg-canvas-hero")) {
-  new p5(backgroundSketch);
+// Initialize when DOM is ready (only once)
+let bgInitialized = false;
+
+function initBackground() {
+  if (bgInitialized) return;
+  const container = document.getElementById("bg-canvas-hero");
+  if (container && typeof p5 !== 'undefined') {
+    new p5(backgroundSketch);
+    bgInitialized = true;
+  }
 }
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById("bg-canvas-hero") && typeof p5 !== 'undefined') {
-    new p5(backgroundSketch);
-  }
-});
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initBackground);
+} else {
+  initBackground();
+}
 
