@@ -7,6 +7,14 @@
   position: relative;
   background: var(--color-black);
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery__inner {
+  max-width: 1920px;
+  width: 100%;
+  position: relative;
 }
 
 .gallery__bg {
@@ -63,6 +71,9 @@
   display: flex;
   justify-content: flex-end;
   padding: 0 106px;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
   min-height: calc(100vh - 263px);
   align-items: center;
 }

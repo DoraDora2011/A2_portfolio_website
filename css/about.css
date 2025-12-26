@@ -19,6 +19,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.about-hero__inner {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 163px;
   background: var(--color-black);
   overflow: hidden;
@@ -169,6 +179,14 @@
   padding: 100px 74px;
   position: relative;
   background: var(--color-black);
+  display: flex;
+  justify-content: center;
+}
+
+.about-me__wrapper {
+  max-width: 1920px;
+  width: 100%;
+  position: relative;
 }
 
 .about-me__container {
