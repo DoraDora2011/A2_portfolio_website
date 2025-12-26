@@ -49,11 +49,13 @@
 
 .about-hero__bamboo--left {
   left: -100px;
+  top: -70px;
   transform: rotate(-15deg);
 }
 
 .about-hero__bamboo--right {
   right: -100px;
+  top: -70px;
   transform: rotate(15deg) scaleX(-1);
 }
 
