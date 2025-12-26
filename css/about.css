@@ -476,8 +476,9 @@ aspect-ratio: 409/624;
     font-size: 18px !important;
   }
   
+  /* Hide bamboo on mobile */
   .about-hero__bamboo {
-    width: 100px !important;
+    display: none !important;
   }
   
   .about-me {

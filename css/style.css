@@ -815,6 +815,18 @@ body {
   animation: fadeIn 0.5s ease;
 }
 
+/* Mobile scroll fade in animation */
+@keyframes fadeInOnScroll {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
   .hero__welcome {
@@ -899,37 +911,58 @@ body {
     font-size: 24px;
   }
   
+  /* === HOME MOBILE: Scroll effect layout === */
+  .hero {
+    min-height: 200vh; /* Double height for scroll effect */
+    display: block;
+    position: relative;
+  }
+  
   .hero__content {
     flex-direction: column;
-    padding: 150px 20px 50px;
-    align-items: flex-start;
+    padding: 120px 20px 50px;
+    align-items: center;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
   }
   
-  .hero__welcome {
-    font-size: 48px;
-  }
-  
-  .hero__welcome .my {
-    font-size: 60px;
-  }
-  
-  .hero__welcome .land {
-    font-size: 48px;
-  }
-  
+  /* First view: DoraChann Portfolio */
   .hero__portfolio {
     position: relative;
-    top: -50px;
-    text-align: left;
-    margin-top: 20px;
+    top: 0;
+    text-align: center;
+    margin-bottom: 30px;
+    order: -1; /* Show first */
   }
   
   .hero__name {
-    font-size: 28px;
+    font-size: 24px;
   }
   
   .hero__title {
+    font-size: 56px;
+  }
+  
+  /* Second view: Welcome to... (appears on scroll) */
+  .hero__welcome {
+    font-size: 36px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInOnScroll 0.5s ease forwards;
+    animation-timeline: scroll();
+    animation-range: 0vh 50vh;
+  }
+  
+  .hero__welcome .my {
     font-size: 48px;
+  }
+  
+  .hero__welcome .land {
+    font-size: 36px;
   }
   
   .hero__title .italic {
@@ -937,16 +970,16 @@ body {
   }
   
   .hero__lotus {
-    width: 120px;
+    width: 100px;
     bottom: auto;
-    top: 60%;
-    right: 5%;
+    top: 70%;
+    right: 10%;
     z-index: 0;
   }
   
   .hero__lotus--small {
-    width: 80px;
-    right: 25%;
+    width: 70px;
+    right: 60%;
     top: 75%;
   }
   
@@ -1023,26 +1056,51 @@ body {
     font-size: 12px;
   }
   
+  /* Hide slogans on mobile */
   .gallery-preview__slogans {
     display: none;
   }
   
+  /* Slider as separate section on mobile */
+  .gallery-preview {
+    padding-top: 80px;
+  }
+  
+  .gallery-preview__lanterns {
+    max-height: 300px;
+    margin-bottom: 20px;
+  }
+  
   .gallery-preview__slider {
-    flex-direction: column;
-    padding: 0 20px;
-    margin-top: -100px;
-    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 0;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    margin: 0 20px;
   }
   
   .gallery-preview__slides {
     width: 100%;
-    max-width: 400px;
-    height: 350px;
+    max-width: 350px;
+    height: 300px;
+    order: 0;
   }
   
   .gallery-preview__arrow {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .gallery-preview__arrow--prev {
+    order: -1;
+  }
+  
+  .gallery-preview__arrow--next {
+    order: 1;
   }
   
   .footer {
