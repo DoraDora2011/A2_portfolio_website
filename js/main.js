@@ -225,16 +225,8 @@ function initParallax() {
       }
     }
 
-    // Lanterns parallax
-    const lanterns = document.querySelector('.gallery-preview__lanterns');
-    if (lanterns) {
-      const section = document.querySelector('.gallery-preview');
-      const rect = section?.getBoundingClientRect();
-      if (rect && rect.top < windowHeight && rect.bottom > 0) {
-        const progress = (windowHeight - rect.top) / (windowHeight + rect.height);
-        lanterns.style.transform = `translateY(${progress * 20}px) rotate(${-5 + progress * 10}deg)`;
-      }
-    }
+    // Lanterns - FIXED, no parallax
+    // Removed parallax effect to keep lanterns stationary
 
     // Parallax for elements with parallax classes
     document.querySelectorAll('.parallax-slow').forEach(el => {
@@ -430,3 +422,46 @@ function initHoverSounds() {
 document.querySelector('.back-button')?.addEventListener('click', () => {
   window.history.back();
 });
+
+
+// ===== GALLERY SLIDER =====
+function initGallerySlider() {
+  const slides = document.querySelectorAll('.gallery-preview__slide');
+  const prevBtn = document.querySelector('.gallery-preview__arrow--prev');
+  const nextBtn = document.querySelector('.gallery-preview__arrow--next');
+  
+  if (!slides.length || !prevBtn || !nextBtn) return;
+  
+  let currentIndex = 1; // Start with middle slide active
+  
+  function showSlide(index) {
+    // Handle wrap around
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    
+    currentIndex = index;
+    
+    slides.forEach((slide, i) => {
+      slide.classList.remove('gallery-preview__slide--active');
+      if (i === currentIndex) {
+        slide.classList.add('gallery-preview__slide--active');
+      }
+    });
+  }
+  
+  prevBtn.addEventListener('click', () => {
+    showSlide(currentIndex - 1);
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    showSlide(currentIndex + 1);
+  });
+  
+  // Auto-slide every 5 seconds
+  setInterval(() => {
+    showSlide(currentIndex + 1);
+  }, 5000);
+}
+
+// Initialize slider when DOM is ready
+document.addEventListener('DOMContentLoaded', initGallerySlider);

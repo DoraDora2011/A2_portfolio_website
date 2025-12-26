@@ -1,0 +1,807 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* VARIABLES */
+:root {
+  --bg-color: #000;
+  --text-color: #fff;
+  --divider-color: rgba(255, 255, 255, 0.15);
+}
+
+/* BASE */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* Default: have cursor */
+body {
+  cursor: auto;
+}
+
+/* only desktop version has to turnoff cursor */
+@media (min-width: 1025px) {
+  body {
+    cursor: none;
+  }
+}
+
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 96px;
+
+  font-family: 'Handjet', sans-serif;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+
+  background: transparent;
+  backdrop-filter: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+  z-index: 9999;
+}
+
+/* NAV LINKS */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 32px;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+  text-transform: uppercase;
+}
+
+/* NAV ACTIVE STATE - SECTION ABOUT ME */
+.nav-links a.is-active {
+  color: #fa75f8;        /* màu hồng ref */
+  opacity: 1;
+}
+
+/* NAV ACTIVE STATES - SECTION GALLERY */
+.nav-links a.is-active-gallery {
+  color: #61f161;
+  opacity: 1;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: white;
+  margin: 5px 0;
+}
+
+/*LOGO*/
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 60px;        /* 👈 chỉnh size logo tại đây */
+  width: auto;
+  display: block;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 96px; /* khớp height navbar */
+  left: 0;
+
+  width: 100%;
+  height: calc(100vh - 96px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  background: rgba(140, 90, 200, 0.35);
+  backdrop-filter: blur(14px);
+
+  font-family: 'Handjet', sans-serif;
+
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+
+  z-index: 999;
+}
+
+.mobile-menu a {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  opacity: 0.9;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-menu a:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* MAIN */
+main {
+  padding-top: 0px;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  padding: 80px 40px;
+}
+
+.section h1 {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background-color: var(--divider-color);
+  margin: 0 40px;
+}
+
+/* ========================= */
+/* HERO BACKGROUND SETUP */
+/* ========================= */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: block;
+  overflow: hidden;
+}
+
+/* p5 mount container */
+#bg-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* canvas opacity control */
+#bg-canvas canvas {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0.85; /* chỉnh background ở đây */
+}
+
+/* content layer */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* ===== HARD FIX FULL-WIDTH BACKGROUND ===== */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: block;
+  overflow: hidden;
+}
+
+#bg-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+#bg-canvas canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 40px;
+}
+
+/* ========================= */
+/* HOME LAYOUT */
+/* ========================= */
+
+.home-layout {
+  position: relative;
+  z-index: 2;
+
+  min-height: 100vh;
+  padding: 120px 80px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+/* LEFT COLUMN */
+.home-left {
+  display: flex;
+  align-items: center;
+}
+
+/* HEADING */
+.First-intro {
+  font-family: 'Handjet', sans-serif;
+  font-size: clamp(64px, 9vw, 128px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  position: relative;
+  top: 35vh;        
+}
+
+.First-intro span {
+  font-family: 'Bilbo Swash Caps', cursive;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.First-intro span1 {
+  font-family: 'Handjet', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.First-intro span1 {
+  display: inline-block;
+}
+
+.First-intro span1 {
+  display: block;
+  margin-left: 0.2em;   /* thụt sâu hơn TO my */
+}
+
+
+/* CENTER COLUMN */
+.home-center {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* LOTUS VIDEOS WRAPPER */
+.lotus-wrapper {
+  position: absolute;
+
+  left: 75%;
+  bottom: 0;
+
+  transform: translateX(10%) translateY(20%);
+
+  z-index: 1 !important;
+
+  display: flex;
+  gap: 40px;
+  align-items: flex-end;
+}
+
+/* LOTUS BASE (Figma-style background) */
+.lotus {
+  width: 429px;                /* Figma width */
+  aspect-ratio: 429 / 766;     /* Figma ratio */
+
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  flex-shrink: 0;
+}
+
+/* LOTUS 1 */
+.lotus-1 {
+  background-image: url("images/Lotus\ GIF.gif");
+}
+
+/* LOTUS 2 */
+.lotus-2 {
+  transform: scale(0.7) translateY(20%);
+  background-image: url("images/Lotus\ GIF.gif");
+}
+
+.home-right-img {
+  position: absolute;
+  right: 70px;
+  top: 30%;
+  transform: translateY(-50%);
+
+  width: 420px;      /* chỉnh size tại đây */
+  max-width: 30vw;   /* tránh quá to trên màn nhỏ */
+  height: auto;
+}
+
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+  .navbar { padding: 0 40px; }
+  .section h1 { font-size: 128px; }
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .navbar { padding: 0 24px; }
+  .section h1 { font-size: 40px; }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+
+  .section {
+    padding: 60px 24px;
+  }
+
+  .section h1 {
+    font-size: 32px;
+  }
+
+  #bg-canvas canvas {
+    opacity: 0.65; /* nhẹ hơn cho mobile */
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+    gap: 80px;
+    padding: 120px 40px;
+  }
+
+  .home-center {
+    justify-content: flex-start;
+  }
+}
+  .lotus-wrapper {
+    gap: 3px;
+  }
+
+
+@media (max-width: 768px) {
+  .lotus-wrapper {
+    bottom: 24px;
+    gap: 5px;
+  }
+}
+
+/* ========================= */
+/* ABOUT BACKGROUND (p5) */
+/* ========================= */
+
+/*SECTION @: ABOUT ME*/
+
+.about-section {
+  position: relative;
+  min-height: 140vh; /* bạn có thể tăng/giảm */
+  overflow: hidden;
+}
+
+/* sketch luôn dưới cùng */
+#bg-canvas-about {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* toàn bộ chữ + dragon */
+.about-content {
+  position: relative;
+  z-index: 2; /* nằm trên sketch */
+  width: 100%;
+  height: 100%;
+}
+
+/* canvas của sketch */
+#bg-canvas-about canvas {
+  display: block;
+  opacity: 0.2;     
+}
+
+.about-text-left {
+  position: absolute;
+  left: 6%;
+  max-width: 45%;
+}
+
+.about-text-right {
+  position: absolute;
+  right: 6%;
+  max-width: 45%;
+  text-align: right;
+}
+
+.about-text-left  { top: 10vh; }
+.about-text-right { top: 30vh; }
+
+.about-heading {
+  font-family: 'Handjet', sans-serif;
+  font-size: 112px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.about-main {
+  font-family: 'Handjet', sans-serif;
+  font-size: 56px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.about-mirror {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  transform: scaleY(-1);
+  opacity: 0.9;
+  margin-left: 15px; /* tạo cảm giác lệch giống ref */
+}
+
+.about-mirror-blue {
+  color: #41D9FF;
+}
+
+.about-mirror-pink {
+  color: #FF71E7;
+}
+
+.about-quote {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  opacity: 0.7;
+  margin-top: 24px;
+}
+
+.about-dragon {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1600px;
+  pointer-events: none;
+  z-index: 1;
+
+  /*animation nhiễu nhẹ */
+  animation: dragon-noise 6s ease-in-out infinite;
+}
+
+/* ANIMATION NHIỄU NHẸ */
+@keyframes dragon-noise {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-2px) rotate(0.15deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(1px) rotate(-0.15deg);
+  }
+  75% {
+    transform: translateX(-50%) translateY(-1px) rotate(0.1deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+}
+
+
+/* RESPONSIVE FOR ABOUT */
+@media (max-width: 1024px) {
+  .about-heading { font-size: 80px; }
+  .about-main { font-size: 40px; }
+  .about-mirror { font-size: 32px; }
+}
+
+/* ========================= */
+/* ABOUT – READ MORE BLOCK */
+/* ========================= */
+
+.about-readmore {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  z-index: 2;           
+}
+
+.about-readmore-wrapper {
+  position: absolute;
+  bottom: -55vh;          
+  left: 10%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* FLOWER */
+.about-flower {
+  width: 96px;
+  height: auto;
+
+  animation: flower-rotate 14s linear infinite;
+}
+
+/* ROTATE ANIMATION */
+@keyframes flower-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* BUTTON */
+.about-btn {
+  background: #FFE7AB;
+  color: #000;
+
+  font-family: 'Handjet', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+
+  padding: 14px 28px;
+  border-radius: 20px;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255, 231, 171, 0.35);
+}
+
+@media (max-width: 1024px) {
+  .about-readmore {
+    bottom: 6vh;
+    gap: 16px;
+  }
+
+  .about-flower {
+    width: 72px;
+  }
+
+  .about-btn {
+    font-size: 28px;
+    padding: 12px 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-readmore {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5vh;
+  }
+
+  .about-btn {
+    font-size: 24px;
+  }
+}
+
+/* ========================= */
+/* FLOWER 2 – TRANSLATE BTN */
+/* ========================= */
+
+.about-flower-translate {
+  width: 10%;              /* 🔧 chỉnh size tại đây */
+  cursor: pointer;
+
+  position: absolute;      /* ✅ QUAN TRỌNG */
+  right: 6%;
+  top: 100%;
+
+  animation:
+    flower-rotate-2 10s linear infinite,
+    flower-pulse 1.8s ease-in-out infinite;
+}
+
+
+/* chỉnh tốc độ xoay */
+@keyframes flower-rotate-2 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* hiệu ứng nhấp nháy */
+@keyframes flower-pulse {
+  0%   { opacity: 0.6; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-flower-translate {
+    width: 64px;
+    bottom: 20%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* ========================= */
+/* ABOUT PAGE 2 - ABOUT ME */
+/* ========================= */
+
+.about-page {
+  padding-top: 120px;
+}
+
+/* COMMON */
+.about2-section {
+  min-height: 100vh;
+  padding: 120px 10%;
+  position: relative;
+}
+
+/* SECTION 1 – INTRO */
+.about2-intro {
+  background: #000;
+}
+
+.about2-heading {
+  font-family: 'Handjet', sans-serif;
+  font-size: 128px;
+  margin-bottom: 40px;
+}
+
+.about2-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  line-height: 1.4;
+  max-width: 800px;
+}
+
+.about2-text.mirror {
+  transform: scaleY(-1);
+  opacity: 0.4;
+  margin-top: 20px;
+}
+
+/* SECTION 2 – JOURNEY */
+.about2-journey {
+  background: #060606;
+}
+
+.about2-subheading {
+  font-family: 'Handjet', sans-serif;
+  font-size: 80px;
+  margin-bottom: 60px;
+}
+
+.about2-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 32px;
+  align-items: baseline;
+}
+
+.timeline-year {
+  font-family: 'Handjet', sans-serif;
+  font-size: 48px;
+  color: #FF86FC;
+}
+
+/* SECTION 3 – VALUES */
+.about2-values {
+  background: #000;
+}
+
+.about2-values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.value-item {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 32px;
+  font-family: 'Handjet', sans-serif;
+  font-size: 36px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .about2-heading { font-size: 80px; }
+  .about2-subheading { font-size: 56px; }
+  .about2-text { font-size: 28px; }
+}
+
+@media (max-width: 768px) {
+  .about2-values-grid {
+    grid-template-columns: 1fr;
+  }
+}

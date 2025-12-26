@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me – Dora</title>
+
+  <link rel="icon" href="images/LOGO-WEB.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="nav-left">
+    <a href="index.html#home" class="logo-link">
+      <img src="images/LOGO-WEB.png" alt="Logo" class="logo-img">
+    </a>
+  </div>
+
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="about.html" class="is-active">ABOUT ME</a></li>
+      <li><a href="index.html#gallery">GALLERY</a></li>
+    </ul>
+
+    <!-- HAMBURGER BUTTON -->
+    <button class="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu">
+  <a href="index.html#home">HOME</a>
+  <a href="about.html" class="is-active">ABOUT ME</a>
+  <a href="index.html#gallery">GALLERY</a>
+</div>
+
+<!-- ================= MAIN ================= -->
+<main class="about-page">
+
+  <!-- SECTION 1 – INTRO -->
+  <section class="about2-section about2-intro">
+    <h1 class="about2-heading">Who am I?</h1>
+
+    <p class="about2-text">
+      I see culture not as something static,  
+      but as a living system — shaped by memory, rituals,  
+      and the way we choose to tell stories today.
+    </p>
+
+    <p class="about2-text mirror">
+      I see culture not as something static,  
+      but as a living system.
+    </p>
+  </section>
+
+  <!-- SECTION 2 – JOURNEY -->
+  <section class="about2-section about2-journey">
+    <h2 class="about2-subheading">My Journey</h2>
+
+    <div class="about2-timeline">
+      <div class="timeline-item">
+        <span class="timeline-year">2021</span>
+        <p>Started exploring visual storytelling & digital art</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">2023</span>
+        <p>Focused on generative art & cultural narratives</p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">2025</span>
+        <p>Building interactive experiences blending tradition & technology</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 – VALUES -->
+  <section class="about2-section about2-values">
+    <h2 class="about2-subheading">What I Care About</h2>
+
+    <div class="about2-values-grid">
+      <div class="value-item">Cultural Identity</div>
+      <div class="value-item">Experimentation</div>
+      <div class="value-item">Emotional Design</div>
+      <div class="value-item">Technology as Medium</div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= HAMBURGER JS ================= -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+  }
+</script>
+
+<!-- ================= p5 (CURSOR) ================= -->
+<script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+<script src="sketch3.js"></script>
+
+</body>
+</html>

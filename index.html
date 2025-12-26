@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <!-- p5.js for cursor effect -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
 <body>
   <!-- Page Loader -->
@@ -120,42 +122,38 @@
     <img src="assets/images/lanterns.png" alt="Vietnamese Lanterns" class="gallery-preview__lanterns" loading="lazy">
     
     <div class="gallery-preview__slogans">
-      <div class="gallery-preview__slogan-text gallery-preview__slogan-text--1">
-        <span>HERITAGE</span>
-        <span>DOES</span>
-        <span>NOT</span>
-      </div>
-      <div class="gallery-preview__slogan-text gallery-preview__slogan-text--2">
-        <span>STAY</span>
-        <span>IN THE</span>
-        <span>PAST</span>
-      </div>
-      <div class="gallery-preview__slogan-text gallery-preview__slogan-text--3">
-        <span>IT'S</span>
-        <span>JUST</span>
-        <span>REBORN</span>
-      </div>
-      <div class="gallery-preview__slogan-text gallery-preview__slogan-text--4">
-        <span>IN</span>
-        <span>EVERY</span>
-        <span>PIXEL</span>
-      </div>
+      <img src="assets/images/slogan-left.png" alt="Heritage Does Not Stay In The Past" class="gallery-preview__slogan-img gallery-preview__slogan-img--left">
+      <img src="assets/images/slogan-right.png" alt="It's Just Reborn In Every Pixel" class="gallery-preview__slogan-img gallery-preview__slogan-img--right">
     </div>
     
-    <div class="gallery-preview__projects">
-      <a href="pages/interactive-code.html" class="gallery-preview__project">
-        <img src="assets/images/cung-tat-nien.png" alt="Cúng Tất Niên - Interactive Joss Paper" loading="lazy">
-        <span class="gallery-preview__project-label">Tap the josspaper to continue the ceremony</span>
-      </a>
+    <div class="gallery-preview__slider">
+      <button class="gallery-preview__arrow gallery-preview__arrow--prev" aria-label="Previous">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+      </button>
       
-      <a href="pages/2d3d-design.html" class="gallery-preview__project gallery-preview__project--main">
-        <img src="assets/images/queen-mother.png" alt="Queen Mother - 2D & 3D Design" loading="lazy">
-      </a>
+      <div class="gallery-preview__slides">
+        <a href="pages/interactive-code.html" class="gallery-preview__slide" data-index="0">
+          <img src="assets/images/cung-tat-nien.png" alt="Cúng Tất Niên - Interactive Joss Paper" loading="lazy">
+          <span class="gallery-preview__project-label">Tap the josspaper to continue the ceremony</span>
+        </a>
+        
+        <a href="pages/2d3d-design.html" class="gallery-preview__slide gallery-preview__slide--active" data-index="1">
+          <img src="assets/images/queen-mother.png" alt="Queen Mother - 2D & 3D Design" loading="lazy">
+        </a>
+        
+        <a href="pages/sound-design.html" class="gallery-preview__slide" data-index="2">
+          <img src="assets/images/boogeyman-poster.png" alt="The Boogeyman - Sound Design" loading="lazy">
+          <span class="gallery-preview__project-label">BOOGEYMAN</span>
+        </a>
+      </div>
       
-      <a href="pages/sound-design.html" class="gallery-preview__project">
-        <img src="assets/images/boogeyman-poster.png" alt="The Boogeyman - Sound Design" loading="lazy">
-        <span class="gallery-preview__project-label">BOOGEYMAN</span>
-      </a>
+      <button class="gallery-preview__arrow gallery-preview__arrow--next" aria-label="Next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+      </button>
     </div>
     
     <div class="gallery-preview__cta">
@@ -188,6 +186,7 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/cursor.js"></script>
 </body>
 </html>
 

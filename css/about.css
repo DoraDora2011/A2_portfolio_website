@@ -422,7 +422,7 @@ aspect-ratio: 409/624;
   bottom: 0;
   width: 70%;
   max-width: 1554px;
-  z-index: 1;
+  z-index: 5;
 }
 
 /* ===== RESPONSIVE ===== */
