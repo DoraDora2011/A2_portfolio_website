@@ -88,6 +88,7 @@
 }
 
 .project__poster {
+  width: 810px;
   max-width: 810px;
   margin: 0 auto;
   position: relative;
@@ -95,7 +96,7 @@
 }
 
 .project__poster img {
-  width: 100%;
+  width: 810px;
   height: auto;
   display: block;
 }
@@ -110,6 +111,8 @@
   right: 400px;
   top: 400px;
   width: 400px;
+  min-width: 400px;
+  max-width: 400px;
   transform: scaleX(-1) rotate(2deg) translateX(0);
   z-index: 1;
   opacity: 0.3;
@@ -122,14 +125,17 @@
 }
 
 .project__decor--bamboo img {
-  width: 100%;
+  width: 400px;
   height: auto;
+  display: block;
 }
 
 .project__decor--flower {
   right: 210px;
   top: 500px;
   width: 350px;
+  min-width: 350px;
+  max-width: 350px;
   transform: scaleX(-1) rotate(2deg) translateX(150px);
   z-index: 2;
   opacity: 0.3;
@@ -142,8 +148,9 @@
 }
 
 .project__decor--flower img {
-  width: 100%;
+  width: 350px;
   height: auto;
+  display: block;
 }
 
 /* Description Section */
