@@ -1333,23 +1333,26 @@ body {
     display: none;
   }
   
-  /* Dragon - Figma: left: calc(50% - 125px), top: 236px */
+  /* Dragon - Mobile only, separate from desktop */
   /* User specified: width: 382px, height: 168px, transform: rotate(90deg), aspect-ratio: 191/84 */
-  /* Scaled position: left: calc(50% - 107px), top: 201px */
+  /* Scaled to fit mobile: max-width calc(100vw - 20px) to prevent overflow */
+  /* Position: centered horizontally, top: 201px */
   .philosophy__dragon {
     position: absolute;
-    left: calc(50% - 107px);
+    left: 50%;
     top: 201px;
-    width: 382px;
-    height: 168px;
+    transform: translateX(-50%);
+    width: 355px; /* Scaled from 382px to fit 375px screen (382 * 0.929 = 355px) */
+    height: 156px; /* Scaled from 168px (168 * 0.929 = 156px) */
+    max-width: calc(100vw - 20px); /* Prevent overflow on smaller screens */
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
   .philosophy__dragon img {
-    width: 382px;
-    height: 168px;
+    width: 355px;
+    height: 156px;
     aspect-ratio: 191 / 84;
     object-fit: contain;
     display: block;
