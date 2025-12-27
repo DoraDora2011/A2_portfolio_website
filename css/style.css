@@ -502,7 +502,7 @@ line-height: normal;
     left: 135px; /* Vietnamese: 135px, English: 169px (handled by JS) */
     top: 1409px;
     height: 58px;
-    width: auto;
+    width: 996px; /* From Figma */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -519,6 +519,7 @@ line-height: normal;
     line-height: normal;
     margin: 0;
     white-space: nowrap;
+    width: 100%;
   }
 
   /* Desktop: Quote 2 - From Figma */
@@ -544,7 +545,7 @@ line-height: normal;
     left: auto !important; /* Override any left value */
     top: 1606px; /* Vietnamese: 1606px, English: 1670px (handled by JS) */
     height: 65px;
-    width: auto;
+    width: 1307px; /* From Figma */
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -562,6 +563,7 @@ line-height: normal;
     line-height: normal;
     margin: 0;
     white-space: nowrap;
+    width: 100%;
   }
 
   /* Desktop: Flower 1 (top right) - From Figma */
