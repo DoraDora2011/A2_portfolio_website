@@ -1368,7 +1368,7 @@ body {
     width: 168px; /* Original container width */
     height: 382px; /* Original container height */
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     z-index: 1;
   }
