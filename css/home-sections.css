@@ -297,17 +297,17 @@
     animation: float 6s ease-in-out infinite;
   }
   
-  /* Lotus Left - Increased 20% total: width 249px -> 301px, moved left 5px */
+  /* Lotus Left - Increased 20% total: width 249px -> 301px, moved left 15px more */
   .home-1__lotus--left {
-    left: -21px !important; /* -16px - 5px = -21px */
+    left: -36px !important; /* -21px - 15px = -36px */
     width: 301px !important; /* 274px * 1.1 = 301px (total 20% increase) */
     height: auto;
     animation-delay: -2s;
   }
   
-  /* Lotus Right - Increased 20% total: width 150px -> 182px, moved left 10px */
+  /* Lotus Right - Increased 20% total: width 150px -> 182px, moved left 15px more */
   .home-1__lotus--right {
-    left: 231px !important; /* 241px - 10px = 231px */
+    left: 216px !important; /* 231px - 15px = 216px */
     width: 182px !important; /* 165px * 1.1 = 182px (total 20% increase) */
     height: auto;
     right: auto !important;
@@ -409,17 +409,17 @@
     animation: float 6s ease-in-out infinite;
   }
   
-  /* Lotus Left - Increased 20% total: width 249px -> 301px, moved left 5px */
+  /* Lotus Left - Increased 20% total: width 249px -> 301px, moved left 15px more */
   .home-2__lotus--left {
-    left: -21px !important; /* -16px - 5px = -21px */
+    left: -36px !important; /* -21px - 15px = -36px */
     width: 301px !important; /* 274px * 1.1 = 301px (total 20% increase) */
     height: auto;
     animation-delay: -2s;
   }
   
-  /* Lotus Right - Increased 20% total: width 150px -> 182px, moved left 10px */
+  /* Lotus Right - Increased 20% total: width 150px -> 182px, moved left 15px more */
   .home-2__lotus--right {
-    left: 231px !important; /* 241px - 10px = 231px */
+    left: 216px !important; /* 231px - 15px = 216px */
     width: 182px !important; /* 165px * 1.1 = 182px (total 20% increase) */
     height: auto;
     right: auto !important;

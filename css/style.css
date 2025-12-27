@@ -1384,8 +1384,8 @@ body {
   }
   
   .philosophy__dragon img {
-    width: 388px !important; /* Reduced 10%: 431px * 0.9 = 388px */
-    height: 170px !important; /* Reduced 10%: 189px * 0.9 = 170px */
+    width: 357px !important; /* Reduced 8%: 388px * 0.92 = 357px */
+    height: 156px !important; /* Reduced 8%: 170px * 0.92 = 156px */
     aspect-ratio: 191 / 84;
     object-fit: contain;
     display: block;
@@ -1448,7 +1448,7 @@ body {
   .philosophy__mirror--first p {
     color: #41D9FF;
     font-family: 'Inter', sans-serif;
-    font-size: 17px; /* Scaled: 20 * 0.852 = 17px */
+    font-size: 12px !important; /* Reduced: 20px - 8px = 12px (smaller than phiso by 8px) */
     font-style: italic;
     font-weight: 200;
     line-height: normal;
@@ -1480,8 +1480,8 @@ body {
   .philosophy__mirror--second {
     position: absolute;
     left: 139px;
-    top: 508px;
-    bottom: -15px;
+    top: 464px !important; /* Moved up 3px: 467px - 3px = 464px, but gap from phiso2 (421px) = 43px, need to match phiso1-mirror1 gap (46px) so 421 + 46 = 467px, then -3px = 464px */
+    bottom: auto;
     width: 206px;
     height: 55px;
     display: flex;
@@ -1493,7 +1493,7 @@ body {
   .philosophy__mirror--second p {
     color: #FF71E7;
     font-family: 'Inter', sans-serif;
-    font-size: 17px; /* Scaled: 20 * 0.852 = 17px */
+    font-size: 12px !important; /* Reduced: 20px - 8px = 12px (smaller than phiso by 8px) */
     font-style: italic;
     font-weight: 200;
     line-height: normal;
