@@ -190,8 +190,18 @@ ul {
   transition: var(--transition-smooth);
 }
 
-/* ===== HERO SECTION (HOME 1) ===== */
-.hero {
+/* ===== HOME SECTION 1: DoraChann Portfolio (Right Align) ===== */
+.home-1 {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ===== HOME SECTION 2: WELCOME TO my Vietnameseland (Left Align) ===== */
+.home-2 {
   min-height: 100vh;
   position: relative;
   display: flex;

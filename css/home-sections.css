@@ -1,0 +1,360 @@
+/* ===== HOME SECTION 1: DoraChann Portfolio (Right Align) ===== */
+.home-1 {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-1__canvas-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home-1__canvas-bg canvas {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0.6;
+  transform: scale(1.25);
+  transform-origin: center center;
+}
+
+.home-1__bg {
+  display: none;
+}
+
+.home-1__content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 106px;
+  padding-top: 200px;
+  position: relative;
+  top: 110px;
+  z-index: 2;
+}
+
+.home-1__portfolio {
+  text-align: right;
+  position: relative;
+}
+
+.home-1__name {
+  color: #FFF;
+  text-align: right;
+  font-family: Handjet;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.home-1__name .chann {
+  color: #FFF;
+  font-family: Handjet;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.home-1__title {
+  color: #FFF;
+  text-align: right;
+  font-family: Handjet;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.home-1__title .fo {
+  color: #FFF;
+  font-family: "Bilbo Swash Caps";
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.home-1__lotus {
+  position: absolute;
+  bottom: -20px;
+  z-index: 4;
+  animation: float 6s ease-in-out infinite;
+}
+
+.home-1__lotus--left {
+  left: 20%;
+  width: 275px;
+  animation-delay: -2s;
+}
+
+.home-1__lotus--right {
+  right: 33%;
+  width: 400px;
+}
+
+/* ===== HOME SECTION 2: WELCOME TO my Vietnameseland (Left Align) ===== */
+.home-2 {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-2__canvas-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home-2__canvas-bg canvas {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0.6;
+  transform: scale(1.25);
+  transform-origin: center center;
+}
+
+.home-2__bg {
+  display: none;
+}
+
+.home-2__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 106px;
+  padding-top: 200px;
+  position: relative;
+  top: 110px;
+  z-index: 2;
+}
+
+.home-2__text {
+  flex: 1;
+}
+
+.home-2__welcome {
+  font-family: var(--font-pixel);
+  font-size: 120px;
+  color: var(--color-white);
+  line-height: 1;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.home-2__welcome .welcome {
+  display: block;
+  font-family: Handjet;
+  font-weight: 600;
+}
+
+.home-2__welcome .to {
+  display: block;
+  font-family: Handjet;
+  font-weight: 600;
+  position: relative;
+  left: 0;
+}
+
+.home-2__welcome .my {
+  font-family: "Bilbo Swash Caps";
+  font-size: 128px;
+  font-style: normal;
+  line-height: normal;
+  display: inline-block;
+  color: var(--color-cream);
+}
+
+.home-2__welcome .land {
+  color: #FFF;
+  position: relative;
+  top: -25px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Handjet;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  display: block;
+}
+
+.home-2__lotus {
+  position: absolute;
+  bottom: -20px;
+  z-index: 4;
+  animation: float 6s ease-in-out infinite;
+}
+
+.home-2__lotus--left {
+  left: 20%;
+  width: 275px;
+  animation-delay: -2s;
+}
+
+.home-2__lotus--right {
+  right: 33%;
+  width: 400px;
+}
+
+/* ===== MOBILE STYLES (max-width: 576px) ===== */
+@media (max-width: 576px) {
+  /* Scale factor: 375/440 = 0.852 */
+  
+  /* === HOME 1: DoraChann Portfolio (Right Align) === */
+  /* Figma Design 78:158 - Frame: 440x956px */
+  .home-1 {
+    min-height: 100vh;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .home-1__content {
+    padding: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 20px;
+    padding-top: 261px; /* Scaled: 261px from Figma */
+  }
+  
+  /* DoraChann - Figma: left 166px (37.7%), top 261px (27.3%), font-size 64px, weight 300, RIGHT */
+  .home-1__name {
+    font-size: 55px; /* Scaled: 64 * 0.852 = 55px */
+    font-weight: 300;
+    line-height: 61px; /* Scaled: 71.5 * 0.852 = 61px */
+    text-align: right;
+    margin-bottom: 0;
+  }
+  
+  .home-1__name .chann {
+    font-size: 55px;
+    font-weight: 300;
+  }
+  
+  /* PortfoLio - Figma: left 41px (9.3%), top 318px (33.3%), font-size 128px, weight 600, RIGHT */
+  .home-1__title {
+    font-size: 109px; /* Scaled: 128 * 0.852 = 109px */
+    font-weight: 600;
+    line-height: 122px; /* Scaled: 143 * 0.852 = 122px */
+    text-align: right;
+    margin-top: 0;
+  }
+  
+  .home-1__title .fo {
+    font-size: 109px;
+    font-family: "Bilbo Swash Caps";
+  }
+  
+  .home-1__lotus {
+    width: 200px;
+    bottom: 10%;
+  }
+  
+  .home-1__lotus--left {
+    left: -19px; /* Scaled from Figma */
+    width: 292px; /* Scaled */
+  }
+  
+  .home-1__lotus--right {
+    right: 283px; /* Scaled from Figma */
+    width: 176px; /* Scaled */
+    top: 670px; /* Scaled from Figma */
+  }
+  
+  /* === HOME 2: WELCOME TO my Vietnameseland (Left Align) === */
+  /* Figma Design 78:167 - Frame: 440x956px */
+  .home-2 {
+    min-height: 100vh;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .home-2__content {
+    padding: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-top: 285px; /* Scaled: 285px from Figma */
+  }
+  
+  /* WELCOME - Figma: left 103px (23.4%), top 285px (29.8%), font-size 64px, weight 600, LEFT */
+  .home-2__welcome {
+    font-size: 55px; /* Scaled: 64 * 0.852 = 55px */
+    line-height: 61px; /* Scaled: 71.5 * 0.852 = 61px */
+    text-align: left;
+  }
+  
+  .home-2__welcome .welcome {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0;
+  }
+  
+  /* TO - Figma: left 205px (46.6%), top 342px (35.8%), font-size 64px, weight 600, LEFT */
+  .home-2__welcome .to {
+    font-size: 55px;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 6px;
+    position: relative;
+    left: 0;
+  }
+  
+  /* my - Figma: left 255px (57.9%), top 342px (35.8%), font-size 64px, Bilbo Swash Caps, LEFT */
+  .home-2__welcome .my {
+    font-size: 55px;
+    font-family: "Bilbo Swash Caps";
+    display: inline-block;
+  }
+  
+  /* Vietnameseland - Figma: left 51px (11.6%), top 399px (41.8%), font-size 64px, weight 300, LEFT */
+  .home-2__welcome .land {
+    font-size: 55px;
+    font-weight: 300;
+    display: block;
+    margin-top: 0;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    top: 0;
+  }
+  
+  .home-2__lotus {
+    width: 200px;
+    bottom: 10%;
+  }
+  
+  .home-2__lotus--left {
+    left: -19px; /* Scaled from Figma */
+    width: 292px; /* Scaled */
+  }
+  
+  .home-2__lotus--right {
+    right: 283px; /* Scaled from Figma */
+    width: 176px; /* Scaled */
+    top: 670px; /* Scaled from Figma */
+  }
+}
+
