@@ -55,18 +55,21 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Block zoom/resize on desktop */
+/* Block zoom/resize on desktop - Fixed 1920x1080 viewport */
 @media (min-width: 1025px) {
   html {
     width: 1920px;
+    height: 1080px;
     margin: 0 auto;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   
   body {
     width: 1920px;
+    height: 1080px;
     margin: 0 auto;
-    overflow-x: hidden;
+    overflow: hidden;
+    position: relative;
   }
 }
 
@@ -383,13 +386,14 @@ line-height: normal;
 
 /* ===== PHILOSOPHY SECTION (HOME 2) ===== */
 .philosophy {
-  min-height: 1800px; /* Ensure enough height for all absolute positioned elements */
+  min-height: 1080px; /* Fixed height for 1920x1080 viewport */
+  height: 1080px; /* Fixed height for desktop */
   padding: 0;
   display: block;
   position: relative;
   background: var(--color-black);
   width: 100%;
-  overflow: visible; /* Allow content to be visible */
+  overflow: hidden; /* Hide overflow for fixed viewport */
 }
 
 .philosophy__inner {
@@ -463,9 +467,9 @@ line-height: normal;
     position: absolute !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    top: 310px !important;
-    width: 1672px !important;
-    height: 736px !important;
+    top: 186px !important; /* Scaled: 310 * 0.6 = 186px */
+    width: 1003px !important; /* Scaled: 1672 * 0.6 = 1003px */
+    height: 442px !important; /* Scaled: 736 * 0.6 = 442px */
     z-index: 2;
     margin: 0 !important;
   }
@@ -483,13 +487,13 @@ line-height: normal;
     z-index: 2;
   }
 
-  /* Desktop: Title - From Figma */
+  /* Desktop: Title - From Figma - Scaled for 1920x1080 */
   .philosophy__title {
     position: absolute;
     left: 106px; /* Vietnamese: 106px, English: 140px (handled by JS) */
-    top: 1184px;
+    top: 710px; /* Scaled: 1184 * 0.6 = 710px */
     font-family: 'Handjet', sans-serif;
-    font-size: 128px;
+    font-size: 77px; /* Scaled: 128 * 0.6 = 77px */
     font-style: normal;
     font-weight: 600; /* semibold */
     line-height: normal;
@@ -499,13 +503,13 @@ line-height: normal;
     z-index: 3;
   }
 
-  /* Desktop: Quote 1 - From Figma */
+  /* Desktop: Quote 1 - From Figma - Scaled for 1920x1080 */
   .philosophy__quote--first {
     position: absolute;
     left: 106px; /* Vietnamese: 106px, English: 140px (handled by JS) */
-    top: 1351px;
+    top: 811px; /* Scaled: 1351 * 0.6 = 811px */
     font-family: 'Handjet', sans-serif;
-    font-size: 64px;
+    font-size: 38px; /* Scaled: 64 * 0.6 = 38px */
     font-style: normal;
     font-weight: 500; /* medium */
     line-height: normal;
@@ -515,13 +519,13 @@ line-height: normal;
     z-index: 3;
   }
 
-  /* Desktop: Mirror 1 - From Figma */
+  /* Desktop: Mirror 1 - From Figma - Scaled for 1920x1080 */
   .philosophy__mirror--first {
     position: absolute;
     left: 135px; /* Vietnamese: 135px, English: 169px (handled by JS) */
-    top: 1409px;
-    height: 58px;
-    width: 996px; /* From Figma */
+    top: 845px; /* Scaled: 1409 * 0.6 = 845px */
+    height: 35px; /* Scaled: 58 * 0.6 = 35px */
+    width: 598px; /* Scaled: 996 * 0.6 = 598px */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -531,7 +535,7 @@ line-height: normal;
 
   .philosophy__mirror--first p {
     font-family: 'Inter', sans-serif;
-    font-size: 48px; /* Vietnamese: 48px, English: 40px (handled by JS) */
+    font-size: 29px; /* Scaled: 48 * 0.6 = 29px, Vietnamese. English: 24px (handled by JS) */
     font-style: italic;
     font-weight: 200; /* extralight */
     color: #41D9FF;
@@ -541,15 +545,15 @@ line-height: normal;
     width: 100%;
   }
 
-  /* Desktop: Quote 2 - From Figma */
+  /* Desktop: Quote 2 - From Figma - Scaled for 1920x1080 */
   .philosophy__quote--second {
     position: absolute !important;
     right: 108px !important; /* 1920 - 1812 = 108px from right */
     left: auto !important; /* Override any left value */
-    top: 1549px; /* Vietnamese: 1549px, English: 1491px (handled by JS) */
+    top: 929px; /* Scaled: 1549 * 0.6 = 929px, Vietnamese. English: 895px (handled by JS) */
     width: auto; /* Vietnamese and English have different widths (handled by JS) */
     font-family: 'Handjet', sans-serif;
-    font-size: 64px;
+    font-size: 38px; /* Scaled: 64 * 0.6 = 38px */
     font-style: normal;
     font-weight: 500; /* medium */
     line-height: normal;
@@ -560,14 +564,14 @@ line-height: normal;
     z-index: 3;
   }
 
-  /* Desktop: Mirror 2 - From Figma */
+  /* Desktop: Mirror 2 - From Figma - Scaled for 1920x1080 */
   .philosophy__mirror--second {
     position: absolute !important;
     right: 108px !important; /* 1920 - 1812 = 108px from right */
     left: auto !important; /* Override any left value */
-    top: 1606px; /* Vietnamese: 1606px, English: 1670px (handled by JS) */
-    height: 65px;
-    width: 1307px; /* Vietnamese: 1307px, English: 906px (handled by JS) */
+    top: 964px; /* Scaled: 1606 * 0.6 = 964px, Vietnamese. English: 1002px (handled by JS) */
+    height: 39px; /* Scaled: 65 * 0.6 = 39px */
+    width: 784px; /* Scaled: 1307 * 0.6 = 784px, Vietnamese. English: 544px (handled by JS) */
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -577,7 +581,7 @@ line-height: normal;
 
   .philosophy__mirror--second p {
     font-family: 'Inter', sans-serif;
-    font-size: 48px; /* Vietnamese: 48px, English: 40px (handled by JS) */
+    font-size: 29px; /* Scaled: 48 * 0.6 = 29px, Vietnamese. English: 24px (handled by JS) */
     font-style: italic;
     font-weight: 200; /* extralight */
     color: #FF71E7;
@@ -588,13 +592,13 @@ line-height: normal;
     width: 100%;
   }
 
-  /* Desktop: Flower 1 (top right) - From Figma */
+  /* Desktop: Flower 1 (top right) - From Figma - Scaled for 1920x1080 */
   .philosophy__flower {
     position: absolute;
     left: 1417px;
-    top: 1126px;
-    width: 279.527px;
-    height: 285.775px;
+    top: 676px; /* Scaled: 1126 * 0.6 = 676px */
+    width: 168px; /* Scaled: 279.527 * 0.6 = 168px */
+    height: 171px; /* Scaled: 285.775 * 0.6 = 171px */
     z-index: 3;
     display: flex;
     align-items: center;
@@ -614,13 +618,13 @@ line-height: normal;
     object-fit: contain;
   }
 
-  /* Desktop: Flower 2 (bottom left) - From Figma */
+  /* Desktop: Flower 2 (bottom left) - From Figma - Scaled for 1920x1080 */
   .philosophy__flower--bottom-left {
     position: absolute;
     left: 124px;
-    top: 1563px;
-    width: 227px;
-    height: 232px;
+    top: 938px; /* Scaled: 1563 * 0.6 = 938px */
+    width: 136px; /* Scaled: 227 * 0.6 = 136px */
+    height: 139px; /* Scaled: 232 * 0.6 = 139px */
     z-index: 3;
     display: flex;
     align-items: center;
@@ -634,13 +638,13 @@ line-height: normal;
     object-fit: contain;
   }
 
-  /* Desktop: Attribution - From Figma */
+  /* Desktop: Attribution - From Figma - Scaled for 1920x1080 */
   .philosophy__attribution {
     position: absolute;
     right: 108px; /* 1920 - 1812 = 108px from right */
-    top: 1699px; /* Vietnamese: 1699px, English: 1763px (handled by JS) */
+    top: 1020px; /* Scaled: 1699 * 0.6 = 1020px, Vietnamese. English: 1058px (handled by JS) */
     font-family: 'Handjet', sans-serif;
-    font-size: 24px;
+    font-size: 14px; /* Scaled: 24 * 0.6 = 14px */
     font-style: normal;
     font-weight: 500; /* medium */
     line-height: normal;
@@ -651,13 +655,13 @@ line-height: normal;
     z-index: 3;
   }
 
-  /* Desktop: CTA Button - From Figma */
+  /* Desktop: CTA Button - From Figma - Scaled for 1920x1080 */
   .philosophy__cta {
     position: absolute;
     left: 377px;
-    top: 1739px;
-    width: 311px;
-    height: 78px;
+    top: 1043px; /* Scaled: 1739 * 0.6 = 1043px */
+    width: 187px; /* Scaled: 311 * 0.6 = 187px */
+    height: 47px; /* Scaled: 78 * 0.6 = 47px */
     z-index: 3;
     margin: 0;
   }
@@ -669,9 +673,9 @@ line-height: normal;
     width: 100%;
     height: 100%;
     background: #FFE7AB;
-    border-radius: 20px;
+    border-radius: 12px; /* Scaled: 20 * 0.6 = 12px */
     font-family: 'Handjet', sans-serif;
-    font-size: 36px;
+    font-size: 22px; /* Scaled: 36 * 0.6 = 22px */
     font-weight: 600; /* semibold */
     color: #000;
     text-decoration: none;

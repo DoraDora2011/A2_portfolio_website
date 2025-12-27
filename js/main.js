@@ -175,66 +175,66 @@ function initLanguageToggle() {
       const mirror2P = mirror2?.querySelector('p');
       
       if (lang === 'vi') {
-        // Vietnamese positions (from Figma node 7:3)
+        // Vietnamese positions - Scaled for 1920x1080 (factor: 0.6)
         if (title) {
           title.style.left = '106px';
-          title.style.top = '1184px';
+          title.style.top = '710px'; /* Scaled: 1184 * 0.6 = 710px */
         }
         if (quote1) {
           quote1.style.left = '106px';
-          quote1.style.top = '1351px';
+          quote1.style.top = '811px'; /* Scaled: 1351 * 0.6 = 811px */
         }
         if (mirror1) {
           mirror1.style.left = '135px';
-          mirror1.style.top = '1409px';
+          mirror1.style.top = '845px'; /* Scaled: 1409 * 0.6 = 845px */
         }
         if (mirror1P) {
-          mirror1P.style.fontSize = '48px';
+          mirror1P.style.fontSize = '29px'; /* Scaled: 48 * 0.6 = 29px */
         }
         if (quote2) {
-          quote2.style.top = '1549px';
+          quote2.style.top = '929px'; /* Scaled: 1549 * 0.6 = 929px */
           quote2.style.width = 'auto'; /* Vietnamese: auto width for shorter text */
         }
         if (mirror2) {
-          mirror2.style.top = '1606px';
-          mirror2.style.width = '1307px'; /* Vietnamese width */
+          mirror2.style.top = '964px'; /* Scaled: 1606 * 0.6 = 964px */
+          mirror2.style.width = '784px'; /* Scaled: 1307 * 0.6 = 784px */
         }
         if (mirror2P) {
-          mirror2P.style.fontSize = '48px';
+          mirror2P.style.fontSize = '29px'; /* Scaled: 48 * 0.6 = 29px */
         }
         if (attribution) {
-          attribution.style.top = '1699px';
+          attribution.style.top = '1020px'; /* Scaled: 1699 * 0.6 = 1020px */
         }
       } else {
-        // English positions (from Figma node 72:121)
+        // English positions - Scaled for 1920x1080 (factor: 0.6)
         if (title) {
           title.style.left = '140px';
-          title.style.top = '1158px';
+          title.style.top = '695px'; /* Scaled: 1158 * 0.6 = 695px */
         }
         if (quote1) {
           quote1.style.left = '140px';
-          quote1.style.top = '1325px';
+          quote1.style.top = '795px'; /* Scaled: 1325 * 0.6 = 795px */
         }
         if (mirror1) {
           mirror1.style.left = '169px';
-          mirror1.style.top = '1383px';
+          mirror1.style.top = '830px'; /* Scaled: 1383 * 0.6 = 830px */
         }
         if (mirror1P) {
-          mirror1P.style.fontSize = '40px';
+          mirror1P.style.fontSize = '24px'; /* Scaled: 40 * 0.6 = 24px */
         }
         if (quote2) {
-          quote2.style.top = '1491px';
-          quote2.style.width = '1199px'; /* English width from Figma */
+          quote2.style.top = '895px'; /* Scaled: 1491 * 0.6 = 895px */
+          quote2.style.width = '719px'; /* Scaled: 1199 * 0.6 = 719px */
         }
         if (mirror2) {
-          mirror2.style.top = '1670px';
-          mirror2.style.width = '906px'; /* English width from Figma */
+          mirror2.style.top = '1002px'; /* Scaled: 1670 * 0.6 = 1002px */
+          mirror2.style.width = '544px'; /* Scaled: 906 * 0.6 = 544px */
         }
         if (mirror2P) {
-          mirror2P.style.fontSize = '40px';
+          mirror2P.style.fontSize = '24px'; /* Scaled: 40 * 0.6 = 24px */
         }
         if (attribution) {
-          attribution.style.top = '1763px';
+          attribution.style.top = '1058px'; /* Scaled: 1763 * 0.6 = 1058px */
         }
       }
     }
