@@ -1349,7 +1349,25 @@ body {
     text-align: center;
   }
   
-  /* Keep slogans visible on mobile - adjust layout */
+  /* Gallery preview layout - keep all elements together */
+  .gallery-preview {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  
+  .gallery-preview__lanterns {
+    max-height: 150px;
+    margin-bottom: 0;
+    width: 100%;
+    object-fit: cover;
+    order: 1;
+  }
+  
+  /* Keep slogans visible and positioned correctly */
   .gallery-preview__slogans {
     display: flex;
     position: relative;
@@ -1360,11 +1378,13 @@ body {
     max-width: 100%;
     height: auto;
     padding: 20px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 20px;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin: 0;
+    order: 2;
+    z-index: 2;
   }
   
   .gallery-preview__slogan-img {
@@ -1372,27 +1392,14 @@ body {
     left: auto !important;
     right: auto !important;
     height: auto;
-    max-height: 150px;
+    max-height: 120px;
     width: auto;
-    max-width: 45%;
+    max-width: 48%;
     margin: 0;
+    flex-shrink: 0;
   }
   
-  /* Gallery preview layout - keep together */
-  .gallery-preview {
-    padding-top: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .gallery-preview__lanterns {
-    max-height: 200px;
-    margin-bottom: 20px;
-    width: 100%;
-    object-fit: cover;
-  }
-  
+  /* Slider container - keep with slogans, not separate */
   .gallery-preview__slider {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1404,6 +1411,9 @@ body {
     border-radius: 20px;
     margin: 0 20px;
     width: calc(100% - 40px);
+    order: 3;
+    position: relative;
+    z-index: 3;
   }
   
   .gallery-preview__slides {
