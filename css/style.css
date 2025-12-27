@@ -368,13 +368,13 @@ line-height: normal;
 
 /* ===== PHILOSOPHY SECTION (HOME 2) ===== */
 .philosophy {
-  min-height: 100vh;
+  min-height: 1800px; /* Ensure enough height for all absolute positioned elements */
   padding: 0;
   display: block;
   position: relative;
   background: var(--color-black);
   width: 100%;
-  overflow: hidden;
+  overflow: visible; /* Allow content to be visible */
 }
 
 .philosophy__inner {

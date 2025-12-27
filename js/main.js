@@ -140,6 +140,78 @@ function initLanguageToggle() {
     if (langToggle) {
       langToggle.title = lang === 'vi' ? 'Switch to English' : 'Chuyển sang tiếng Việt';
     }
+    
+    // Update desktop positions based on language (Figma values)
+    if (window.innerWidth >= 1025) {
+      const title = document.querySelector('.philosophy__title');
+      const quote1 = document.querySelector('.philosophy__quote--first');
+      const mirror1 = document.querySelector('.philosophy__mirror--first');
+      const quote2 = document.querySelector('.philosophy__quote--second');
+      const mirror2 = document.querySelector('.philosophy__mirror--second');
+      const attribution = document.querySelector('.philosophy__attribution');
+      const mirror1P = mirror1?.querySelector('p');
+      const mirror2P = mirror2?.querySelector('p');
+      
+      if (lang === 'vi') {
+        // Vietnamese positions (from Figma node 7:3)
+        if (title) {
+          title.style.left = '106px';
+          title.style.top = '1184px';
+        }
+        if (quote1) {
+          quote1.style.left = '106px';
+          quote1.style.top = '1351px';
+        }
+        if (mirror1) {
+          mirror1.style.left = '135px';
+          mirror1.style.top = '1409px';
+        }
+        if (mirror1P) {
+          mirror1P.style.fontSize = '48px';
+        }
+        if (quote2) {
+          quote2.style.top = '1549px';
+        }
+        if (mirror2) {
+          mirror2.style.top = '1606px';
+        }
+        if (mirror2P) {
+          mirror2P.style.fontSize = '48px';
+        }
+        if (attribution) {
+          attribution.style.top = '1699px';
+        }
+      } else {
+        // English positions (from Figma node 72:121)
+        if (title) {
+          title.style.left = '140px';
+          title.style.top = '1158px';
+        }
+        if (quote1) {
+          quote1.style.left = '140px';
+          quote1.style.top = '1325px';
+        }
+        if (mirror1) {
+          mirror1.style.left = '169px';
+          mirror1.style.top = '1383px';
+        }
+        if (mirror1P) {
+          mirror1P.style.fontSize = '40px';
+        }
+        if (quote2) {
+          quote2.style.top = '1491px';
+        }
+        if (mirror2) {
+          mirror2.style.top = '1670px';
+        }
+        if (mirror2P) {
+          mirror2P.style.fontSize = '40px';
+        }
+        if (attribution) {
+          attribution.style.top = '1763px';
+        }
+      }
+    }
   }
 }
 
