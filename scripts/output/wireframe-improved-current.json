@@ -1,0 +1,15 @@
+{
+  "elements": [
+    {
+      "id": "element_0",
+      "type": "text",
+      "position": {
+        "left": 20,
+        "top": 464,
+        "width": 160,
+        "height": 39
+      }
+    }
+  ],
+  "scale_factor": 1.0
+}

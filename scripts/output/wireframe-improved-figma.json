@@ -1,0 +1,25 @@
+{
+  "elements": [
+    {
+      "id": "element_0",
+      "type": "text",
+      "position": {
+        "left": 3.4,
+        "top": 11.9,
+        "width": 312.8,
+        "height": 48.6
+      }
+    },
+    {
+      "id": "element_1",
+      "type": "text",
+      "position": {
+        "left": 100.6,
+        "top": 632.4,
+        "width": 208.8,
+        "height": 48.6
+      }
+    }
+  ],
+  "scale_factor": 0.8522727272727273
+}

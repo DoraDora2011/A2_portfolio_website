@@ -1,0 +1,70 @@
+{
+  "elements": [
+    {
+      "id": "element_0",
+      "type": "text",
+      "position": {
+        "left": 3.4,
+        "top": 11.9,
+        "width": 51.1,
+        "height": 47.7
+      },
+      "original": {
+        "left": 4,
+        "top": 14,
+        "width": 60,
+        "height": 56
+      }
+    },
+    {
+      "id": "element_1",
+      "type": "text",
+      "position": {
+        "left": 234.4,
+        "top": 11.9,
+        "width": 81.8,
+        "height": 47.7
+      },
+      "original": {
+        "left": 275,
+        "top": 14,
+        "width": 96,
+        "height": 56
+      }
+    },
+    {
+      "id": "element_2",
+      "type": "text",
+      "position": {
+        "left": 193.5,
+        "top": 598.3,
+        "width": 22.2,
+        "height": 23.9
+      },
+      "original": {
+        "left": 227,
+        "top": 702,
+        "width": 26,
+        "height": 28
+      }
+    },
+    {
+      "id": "element_3",
+      "type": "text",
+      "position": {
+        "left": 100.6,
+        "top": 632.4,
+        "width": 118.5,
+        "height": 47.7
+      },
+      "original": {
+        "left": 118,
+        "top": 742,
+        "width": 139,
+        "height": 56
+      }
+    }
+  ],
+  "scale_factor": 0.8522727272727273,
+  "frame_width": 375
+}

@@ -236,12 +236,13 @@
     position: relative;
   }
   
-  /* DoraChann - Figma: left 166px (37.7%), top 261px (27.3%), font-size 64px, weight 300, RIGHT */
-  /* Scaled: left 141px, top 222px (relative to section, not viewport) */
+  /* DoraChann - Figma: left 394px (with translate-x-[-100%] = right align) */
+  /* Frame: 440px, right = 440 - 394 = 46px */
+  /* Scaled: right = 46 * 0.852 = 39px, top = 261 * 0.852 = 222px */
   .home-1__name {
     position: absolute;
-    left: 141px; /* Scaled: 166 * 0.852 = 141px */
-    top: 222px; /* Scaled: 261 * 0.852 = 222px (from top of section) */
+    right: 39px; /* Scaled: (440 - 394) * 0.852 = 39px */
+    top: 222px; /* Scaled: 261 * 0.852 = 222px */
     font-size: 55px; /* Scaled: 64 * 0.852 = 55px */
     font-weight: 300;
     line-height: 61px; /* Scaled: 71.5 * 0.852 = 61px */
@@ -255,11 +256,12 @@
     font-weight: 300;
   }
   
-  /* PortfoLio - Figma: left 41px (9.3%), top 318px (33.3%), font-size 128px, weight 600, RIGHT */
-  /* Scaled: left 35px, top 271px */
+  /* PortfoLio - Figma: left 399px (with translate-x-[-100%] = right align) */
+  /* Frame: 440px, right = 440 - 399 = 41px */
+  /* Scaled: right = 41 * 0.852 = 35px, top = 318 * 0.852 = 271px */
   .home-1__title {
     position: absolute;
-    left: 35px; /* Scaled: 41 * 0.852 = 35px */
+    right: 35px; /* Scaled: (440 - 399) * 0.852 = 35px */
     top: 271px; /* Scaled: 318 * 0.852 = 271px */
     font-size: 109px; /* Scaled: 128 * 0.852 = 109px */
     font-weight: 600;
@@ -311,12 +313,12 @@
     position: relative;
   }
   
-  /* WELCOME - Figma: left 103px (23.4%), top 285px (29.8%), font-size 64px, weight 600, LEFT */
-  /* Scaled: left 88px, top 243px */
+  /* WELCOME - Figma: left 103px, top 285px, font-size 64px, weight 600, LEFT */
+  /* Scaled: left 88px, top 243px, fontSize 55px */
   .home-2__welcome {
-    position: absolute;
-    left: 88px; /* Scaled: 103 * 0.852 = 88px */
-    top: 243px; /* Scaled: 285 * 0.852 = 243px */
+    position: relative;
+    left: 0;
+    top: 0;
     font-size: 55px; /* Scaled: 64 * 0.852 = 55px */
     line-height: 61px; /* Scaled: 71.5 * 0.852 = 61px */
     text-align: left;
@@ -326,13 +328,13 @@
   .home-2__welcome .welcome {
     font-weight: 600;
     display: block;
-    margin-bottom: 0;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 88px; /* Scaled: 103 * 0.852 = 88px */
+    top: 243px; /* Scaled: 285 * 0.852 = 243px */
+    margin: 0;
   }
   
-  /* TO - Figma: left 205px (46.6%), top 342px (35.8%), font-size 64px, weight 600, LEFT */
+  /* TO - Figma: left 205px, top 342px, font-size 64px, weight 600, LEFT */
   /* Scaled: left 175px, top 291px */
   .home-2__welcome .to {
     font-size: 55px;
@@ -340,21 +342,23 @@
     display: block;
     position: absolute;
     left: 175px; /* Scaled: 205 * 0.852 = 175px */
-    top: 48px; /* 291 - 243 = 48px from welcome */
+    top: 291px; /* Scaled: 342 * 0.852 = 291px */
+    margin: 0;
   }
   
-  /* my - Figma: left 255px (57.9%), top 342px (35.8%), font-size 64px, Bilbo Swash Caps, LEFT */
+  /* my - Figma: left 255px, top 342px, font-size 64px, Bilbo Swash Caps, LEFT */
   /* Scaled: left 217px, top 291px */
   .home-2__welcome .my {
     font-size: 55px;
     font-family: "Bilbo Swash Caps";
-    display: inline-block;
+    display: block;
     position: absolute;
     left: 217px; /* Scaled: 255 * 0.852 = 217px */
-    top: 48px; /* Same as TO */
+    top: 291px; /* Scaled: 342 * 0.852 = 291px */
+    margin: 0;
   }
   
-  /* Vietnameseland - Figma: left 51px (11.6%), top 399px (41.8%), font-size 64px, weight 300, LEFT */
+  /* Vietnameseland - Figma: left 51px, top 399px, font-size 64px, weight 300, LEFT */
   /* Scaled: left 43px, top 340px */
   .home-2__welcome .land {
     font-size: 55px;
@@ -362,8 +366,9 @@
     display: block;
     position: absolute;
     left: 43px; /* Scaled: 51 * 0.852 = 43px */
-    top: 97px; /* 340 - 243 = 97px from welcome */
+    top: 340px; /* Scaled: 399 * 0.852 = 340px */
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
   }
   
   .home-2__lotus {

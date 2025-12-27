@@ -1,0 +1,66 @@
+{
+  "elements": [
+    {
+      "left": 87.8,
+      "top": 242.9,
+      "width": null,
+      "height": null,
+      "fontSize": 54.5,
+      "original": {
+        "left": 103,
+        "top": 285,
+        "width": null,
+        "height": null,
+        "fontSize": 64,
+        "classes": "absolute font-['Handjet:SemiBold',sans-serif] font-semibold leading-[normal] left-[103px] text-[64px] text-nowrap text-white top-[285px]"
+      }
+    },
+    {
+      "left": 174.7,
+      "top": 291.5,
+      "width": null,
+      "height": null,
+      "fontSize": 54.5,
+      "original": {
+        "left": 205,
+        "top": 342,
+        "width": null,
+        "height": null,
+        "fontSize": 64,
+        "classes": "absolute font-['Handjet:SemiBold',sans-serif] font-semibold leading-[normal] left-[205px] text-[64px] text-nowrap text-white top-[342px]"
+      }
+    },
+    {
+      "left": 217.3,
+      "top": 291.5,
+      "width": null,
+      "height": null,
+      "fontSize": 54.5,
+      "original": {
+        "left": 255,
+        "top": 342,
+        "width": null,
+        "height": null,
+        "fontSize": 64,
+        "classes": "absolute font-['Bilbo_Swash_Caps:Regular',sans-serif] leading-[normal] left-[255px] not-italic text-[64px] text-nowrap text-white top-[342px]"
+      }
+    },
+    {
+      "left": 43.5,
+      "top": 340.1,
+      "width": null,
+      "height": null,
+      "fontSize": 54.5,
+      "original": {
+        "left": 51,
+        "top": 399,
+        "width": null,
+        "height": null,
+        "fontSize": 64,
+        "classes": "absolute font-['Handjet:Light',sans-serif] font-light leading-[normal] left-[51px] text-[64px] text-nowrap text-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] text-white top-[399px]"
+      }
+    }
+  ],
+  "scale_factor": 0.8522727272727273,
+  "target_width": 375
+}

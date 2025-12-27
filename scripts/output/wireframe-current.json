@@ -1,0 +1,134 @@
+{
+  "elements": [
+    {
+      "id": "element_0",
+      "type": "text",
+      "position": {
+        "left": 20.0,
+        "top": 464.0,
+        "width": 32.0,
+        "height": 38.0
+      },
+      "original": {
+        "left": 20,
+        "top": 464,
+        "width": 32,
+        "height": 38
+      }
+    },
+    {
+      "id": "element_1",
+      "type": "text",
+      "position": {
+        "left": 54.0,
+        "top": 464.0,
+        "width": 16.0,
+        "height": 38.0
+      },
+      "original": {
+        "left": 54,
+        "top": 464,
+        "width": 16,
+        "height": 38
+      }
+    },
+    {
+      "id": "element_2",
+      "type": "text",
+      "position": {
+        "left": 135.0,
+        "top": 464.0,
+        "width": 17.0,
+        "height": 38.0
+      },
+      "original": {
+        "left": 135,
+        "top": 464,
+        "width": 17,
+        "height": 38
+      }
+    },
+    {
+      "id": "element_3",
+      "type": "text",
+      "position": {
+        "left": 112.0,
+        "top": 467.0,
+        "width": 19.0,
+        "height": 35.0
+      },
+      "original": {
+        "left": 112,
+        "top": 467,
+        "width": 19,
+        "height": 35
+      }
+    },
+    {
+      "id": "element_4",
+      "type": "text",
+      "position": {
+        "left": 27.0,
+        "top": 525.0,
+        "width": 38.0,
+        "height": 38.0
+      },
+      "original": {
+        "left": 27,
+        "top": 525,
+        "width": 38,
+        "height": 38
+      }
+    },
+    {
+      "id": "element_5",
+      "type": "text",
+      "position": {
+        "left": 109.0,
+        "top": 539.0,
+        "width": 29.0,
+        "height": 41.0
+      },
+      "original": {
+        "left": 109,
+        "top": 539,
+        "width": 29,
+        "height": 41
+      }
+    },
+    {
+      "id": "element_6",
+      "type": "text",
+      "position": {
+        "left": 293.0,
+        "top": 593.0,
+        "width": 14.0,
+        "height": 39.0
+      },
+      "original": {
+        "left": 293,
+        "top": 593,
+        "width": 14,
+        "height": 39
+      }
+    },
+    {
+      "id": "element_7",
+      "type": "text",
+      "position": {
+        "left": 21.0,
+        "top": 596.0,
+        "width": 20.0,
+        "height": 36.0
+      },
+      "original": {
+        "left": 21,
+        "top": 596,
+        "width": 20,
+        "height": 36
+      }
+    }
+  ],
+  "scale_factor": 1.0,
+  "frame_width": 375
+}

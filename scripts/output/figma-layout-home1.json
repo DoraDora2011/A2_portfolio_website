@@ -1,0 +1,36 @@
+{
+  "elements": [
+    {
+      "left": 335.8,
+      "top": 222.4,
+      "width": null,
+      "height": null,
+      "fontSize": null,
+      "original": {
+        "left": 394,
+        "top": 261,
+        "width": null,
+        "height": null,
+        "fontSize": 0,
+        "classes": "absolute font-['Handjet:Light',sans-serif] font-light leading-[normal] left-[394px] text-[0px] text-[64px] text-nowrap text-right text-white top-[261px] translate-x-[-100%]"
+      }
+    },
+    {
+      "left": 340.1,
+      "top": 271.0,
+      "width": null,
+      "height": null,
+      "fontSize": null,
+      "original": {
+        "left": 399,
+        "top": 318,
+        "width": null,
+        "height": null,
+        "fontSize": 0,
+        "classes": "absolute font-['Handjet:SemiBold',sans-serif] font-semibold leading-[normal] left-[399px] text-[0px] text-[128px] text-nowrap text-right text-white top-[318px] translate-x-[-100%]"
+      }
+    }
+  ],
+  "scale_factor": 0.8522727272727273,
+  "target_width": 375
+}
