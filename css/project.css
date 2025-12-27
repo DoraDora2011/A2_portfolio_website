@@ -107,7 +107,7 @@
 }
 
 .project__decor--bamboo {
-  right: -200px;
+  right: 0px;
   top: 300px;
   width: 400px;
   transform: scaleX(-1) rotate(2deg) translateX(100px);
