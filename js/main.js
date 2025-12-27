@@ -171,6 +171,7 @@ function initLanguageToggle() {
         }
         if (quote2) {
           quote2.style.top = '1549px';
+          quote2.style.width = 'auto'; /* Vietnamese: auto width for shorter text */
         }
         if (mirror2) {
           mirror2.style.top = '1606px';
@@ -201,6 +202,7 @@ function initLanguageToggle() {
         }
         if (quote2) {
           quote2.style.top = '1491px';
+          quote2.style.width = '1199px'; /* English width from Figma */
         }
         if (mirror2) {
           mirror2.style.top = '1670px';

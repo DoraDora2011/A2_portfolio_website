@@ -532,6 +532,7 @@ line-height: normal;
     right: 108px !important; /* 1920 - 1812 = 108px from right */
     left: auto !important; /* Override any left value */
     top: 1549px; /* Vietnamese: 1549px, English: 1491px (handled by JS) */
+    width: auto; /* Vietnamese and English have different widths (handled by JS) */
     font-family: 'Handjet', sans-serif;
     font-size: 64px;
     font-style: normal;
