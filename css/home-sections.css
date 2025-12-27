@@ -321,8 +321,8 @@
     margin: 0 !important;
     width: 100%;
     max-width: 100%;
-    position: relative;
-    min-height: 100vh;
+    position: static !important; /* Static so children position relative to .home-2 */
+    min-height: 0;
   }
   
   /* Position elements relative to section, not content container */
