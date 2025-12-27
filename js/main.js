@@ -110,11 +110,21 @@ function initLanguageToggle() {
     currentLang = currentLang === 'vi' ? 'en' : 'vi';
     updateLanguage(currentLang);
     
-    // Add visual feedback - rotate flower
-    langToggle.style.transform = 'translateY(-50%) rotate(360deg) scale(1.2)';
-    setTimeout(() => {
-      langToggle.style.transform = 'translateY(-50%)';
-    }, 500);
+    // Add visual feedback - only scale on mobile, rotate on desktop
+    const isMobile = window.innerWidth <= 576;
+    if (isMobile) {
+      // Mobile: only scale, no rotation
+      langToggle.style.transform = 'scale(1.2)';
+      setTimeout(() => {
+        langToggle.style.transform = '';
+      }, 300);
+    } else {
+      // Desktop: rotate flower
+      langToggle.style.transform = 'translateY(-50%) rotate(360deg) scale(1.2)';
+      setTimeout(() => {
+        langToggle.style.transform = 'translateY(-50%)';
+      }, 500);
+    }
     
     // Save preference
     localStorage.setItem('preferredLang', currentLang);

@@ -1329,6 +1329,15 @@ body {
     transform: scale(1.05);
   }
   
+  .philosophy__lang-toggle:active {
+    transform: scale(0.95);
+  }
+  
+  /* Prevent rotation on mobile when clicked */
+  .philosophy__lang-toggle[style*="rotate"] {
+    transform: scale(1.05) !important;
+  }
+  
   .philosophy__lang-toggle::after {
     display: none;
   }
@@ -1447,6 +1456,7 @@ body {
     position: absolute;
     left: 139px;
     top: 508px;
+    bottom: -15px;
     width: 206px;
     height: 55px;
     display: flex;
