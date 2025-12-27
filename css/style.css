@@ -1430,13 +1430,11 @@ body {
     padding: 0;
   }
   
-  /* Mirror 1 - Figma: left: 195px, top: 403px, w: 234.745px, h: 60.297px */
-  /* User: color: #41D9FF, font-size: 20px, font-weight: 200, italic, width: 234.745px, height: 60.297px */
-  /* Scaled: left: 166px, top: 343px, w: 200px, h: 51px, font-size: 17px */
+  /* Mirror 1 - Moved closer to text */
   .philosophy__mirror--first {
     position: absolute;
     left: 166px;
-    top: 343px;
+    top: 330px !important; /* Moved closer: 343px - 13px = 330px */
     width: 200px;
     height: 51px;
     display: flex;
@@ -1479,8 +1477,8 @@ body {
   /* Scaled: left: 139px, top: 508px, w: 206px, h: 55px, font-size: 17px */
   .philosophy__mirror--second {
     position: absolute;
-    left: 139px;
-    top: 464px !important; /* Equal gap: phiso2 (421px) + 46px (same as phiso1-mirror1 gap) - 3px (moved up) = 464px */
+    left: 153px !important; /* Aligned with phiso2 left: 153px */
+    top: 451px !important; /* Moved closer: 464px - 13px = 451px (same gap reduction as mirror1) */
     bottom: auto;
     width: 206px;
     height: 55px;
