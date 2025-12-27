@@ -798,6 +798,7 @@ line-height: normal;
 }
 
 .footer__contact-item {
+  left: -10px;
   font-family: var(--font-serif);
   font-size: 30px;
   color: var(--color-black);
