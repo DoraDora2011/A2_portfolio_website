@@ -99,6 +99,7 @@ function initNavigation() {
 // ===== LANGUAGE TOGGLE =====
 function initLanguageToggle() {
   const langToggle = document.getElementById('langToggle');
+  const flowerToggle = document.querySelector('.philosophy__flower'); // Top right flower
   let currentLang = localStorage.getItem('preferredLang') || 'vi';
 
   // Load saved language preference on init
@@ -106,7 +107,8 @@ function initLanguageToggle() {
     updateLanguage(currentLang);
   }
 
-  langToggle?.addEventListener('click', () => {
+  // Function to toggle language
+  function toggleLanguage() {
     currentLang = currentLang === 'vi' ? 'en' : 'vi';
     updateLanguage(currentLang);
     
@@ -114,22 +116,42 @@ function initLanguageToggle() {
     const isMobile = window.innerWidth <= 576;
     if (isMobile) {
       // Mobile: only scale, no rotation
-      langToggle.style.transform = 'scale(1.2)';
-      setTimeout(() => {
-        langToggle.style.transform = '';
-      }, 300);
+      if (langToggle) {
+        langToggle.style.transform = 'scale(1.2)';
+        setTimeout(() => {
+          langToggle.style.transform = '';
+        }, 300);
+      }
     } else {
       // Desktop: rotate flower
-      langToggle.style.transform = 'translateY(-50%) rotate(360deg) scale(1.2)';
-      setTimeout(() => {
-        langToggle.style.transform = 'translateY(-50%)';
-      }, 500);
+      if (langToggle) {
+        langToggle.style.transform = 'translateY(-50%) rotate(360deg) scale(1.2)';
+        setTimeout(() => {
+          langToggle.style.transform = 'translateY(-50%)';
+        }, 500);
+      }
+      // Rotate top right flower too
+      if (flowerToggle) {
+        flowerToggle.style.transform = 'rotate(180deg) rotate(360deg)';
+        setTimeout(() => {
+          flowerToggle.style.transform = 'rotate(180deg)';
+        }, 500);
+      }
     }
     
     // Save preference
     localStorage.setItem('preferredLang', currentLang);
     console.log(`🌐 Language switched to: ${currentLang === 'vi' ? 'Vietnamese' : 'English'}`);
-  });
+  }
+
+  // Add click event to langToggle button
+  langToggle?.addEventListener('click', toggleLanguage);
+  
+  // Add click event to top right flower (desktop only)
+  if (flowerToggle && window.innerWidth >= 1025) {
+    flowerToggle.style.cursor = 'pointer';
+    flowerToggle.addEventListener('click', toggleLanguage);
+  }
 
   function updateLanguage(lang) {
     const elements = document.querySelectorAll('[data-vi][data-en]');
