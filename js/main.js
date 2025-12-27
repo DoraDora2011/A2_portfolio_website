@@ -174,6 +174,7 @@ function initLanguageToggle() {
         }
         if (mirror2) {
           mirror2.style.top = '1606px';
+          mirror2.style.width = '1307px'; /* Vietnamese width */
         }
         if (mirror2P) {
           mirror2P.style.fontSize = '48px';
@@ -203,6 +204,7 @@ function initLanguageToggle() {
         }
         if (mirror2) {
           mirror2.style.top = '1670px';
+          mirror2.style.width = '906px'; /* English width from Figma */
         }
         if (mirror2P) {
           mirror2P.style.fontSize = '40px';

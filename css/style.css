@@ -475,7 +475,9 @@ line-height: normal;
     top: 1184px;
     font-family: 'Handjet', sans-serif;
     font-size: 128px;
+    font-style: normal;
     font-weight: 600; /* semibold */
+    line-height: normal;
     color: #FFF;
     white-space: nowrap;
     margin: 0;
@@ -489,7 +491,9 @@ line-height: normal;
     top: 1351px;
     font-family: 'Handjet', sans-serif;
     font-size: 64px;
+    font-style: normal;
     font-weight: 500; /* medium */
+    line-height: normal;
     color: #FFF;
     white-space: nowrap;
     margin: 0;
@@ -530,7 +534,9 @@ line-height: normal;
     top: 1549px; /* Vietnamese: 1549px, English: 1491px (handled by JS) */
     font-family: 'Handjet', sans-serif;
     font-size: 64px;
+    font-style: normal;
     font-weight: 500; /* medium */
+    line-height: normal;
     color: #FFF;
     text-align: right;
     white-space: nowrap;
@@ -545,7 +551,7 @@ line-height: normal;
     left: auto !important; /* Override any left value */
     top: 1606px; /* Vietnamese: 1606px, English: 1670px (handled by JS) */
     height: 65px;
-    width: 1307px; /* From Figma */
+    width: 1307px; /* Vietnamese: 1307px, English: 906px (handled by JS) */
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -613,7 +619,9 @@ line-height: normal;
     top: 1699px; /* Vietnamese: 1699px, English: 1763px (handled by JS) */
     font-family: 'Handjet', sans-serif;
     font-size: 24px;
+    font-style: normal;
     font-weight: 500; /* medium */
+    line-height: normal;
     color: #FFF;
     text-align: right;
     white-space: nowrap;
