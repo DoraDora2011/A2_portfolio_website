@@ -240,9 +240,9 @@ function initLanguageToggle() {
           // Mirror 2 follows Quote 2 exactly
           mirror2.style.whiteSpace = 'normal';
           mirror2.style.left = 'auto';
-          mirror2.style.right = '100px'; // Match Quote 2 alignment
+          mirror2.style.right = '400px'; // Match Quote 2 alignment
           mirror2.style.top = '1100px';
-          mirror2.style.width = '1200px'; // Match Quote 2 width
+          mirror2.style.width = '900px'; // Match Quote 2 width
           mirror2.style.justifyContent = 'flex-end'; // Align right
         }
         if (mirror2P) {

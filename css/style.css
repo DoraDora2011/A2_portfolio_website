@@ -610,7 +610,7 @@ ul {
   /* Desktop: Mirror 2 - From Figma - Scaled for 1920x1080 */
   .philosophy__mirror--second {
     position: absolute;
-    left: 1000px;
+    left: 800px;
     /* Default Vietnamese position */
     top: 980px;
     height: 50px;
