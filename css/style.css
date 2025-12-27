@@ -1364,7 +1364,7 @@ body {
   .philosophy__dragon {
     position: absolute;
     left: 5%; /* Scaled from calc(50% - 125px) */
-    top: 201px; /* Scaled from 236px */
+    top: 351px; /* Scaled from 236px */
     width: 168px; /* Original container width */
     height: 382px; /* Original container height */
     display: flex;
