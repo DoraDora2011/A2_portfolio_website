@@ -1429,25 +1429,30 @@ body {
     font-family: 'Handjet', monospace;
   }
   
-  /* Gallery preview layout - keep all elements together */
+  /* === GALLERY PREVIEW MOBILE: Layout chính xác theo Figma === */
+  /* Frame: 440x956px, background black */
+  /* Lanterns ở top, Slogans ở giữa, Slider ở dưới */
   .gallery-preview {
-    padding-top: 80px;
+    padding-top: 60px;
     padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0;
+    background: var(--color-black);
   }
   
+  /* Lanterns ở top - Figma: 1139x413px (full width banner) */
   .gallery-preview__lanterns {
-    max-height: 150px;
+    max-height: 180px; /* Scaled: 413 * (375/440) = 352px, nhưng giữ tỷ lệ */
     margin-bottom: 0;
     width: 100%;
     object-fit: cover;
     order: 1;
   }
   
-  /* Keep slogans visible and positioned correctly */
+  /* Slogans - Figma: left(203x332px), center(112x363px), right(111x299px) */
+  /* Position: left pos(0, 478), center pos(233, 447), right pos(329, 479) */
   .gallery-preview__slogans {
     display: flex;
     position: relative;
@@ -1457,11 +1462,11 @@ body {
     width: 100%;
     max-width: 100%;
     height: auto;
-    padding: 20px;
-    justify-content: space-between;
+    padding: 15px 10px;
+    justify-content: space-around; /* Distribute evenly */
     align-items: center;
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 8px;
     margin: 0;
     order: 2;
     z-index: 2;
@@ -1472,25 +1477,27 @@ body {
     left: auto !important;
     right: auto !important;
     height: auto;
-    max-height: 120px;
+    max-height: 280px; /* Scaled: 363 * (375/440) = 309px, nhưng giữ tỷ lệ */
     width: auto;
-    max-width: 48%;
+    max-width: 30%; /* 3 slogans chia đều */
     margin: 0;
     flex-shrink: 0;
+    object-fit: contain;
   }
   
-  /* Slider container - keep with slogans, not separate */
+  /* Slider container - ở dưới slogans */
+  /* Figma: có colored box với slider bên trong */
   .gallery-preview__slider {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
-    margin-top: 0;
+    padding: 20px 15px;
+    margin-top: 20px;
     gap: 15px;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 20px;
-    margin: 0 20px;
-    width: calc(100% - 40px);
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    margin: 20px 15px 0;
+    width: calc(100% - 30px);
     order: 3;
     position: relative;
     z-index: 3;
@@ -1498,14 +1505,19 @@ body {
   
   .gallery-preview__slides {
     width: 100%;
-    max-width: 350px;
-    height: 300px;
+    max-width: 320px; /* Scaled từ Figma */
+    height: 280px; /* Scaled từ Figma */
     order: 0;
   }
   
+  .gallery-preview__slide {
+    min-width: 280px;
+    height: 280px;
+  }
+  
   .gallery-preview__arrow {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
   
   .gallery-preview__arrow--prev {
@@ -1514,6 +1526,13 @@ body {
   
   .gallery-preview__arrow--next {
     order: 1;
+  }
+  
+  /* CTA button */
+  .gallery-preview__cta {
+    margin-top: 25px;
+    order: 4;
+    text-align: center;
   }
   
   .footer {
