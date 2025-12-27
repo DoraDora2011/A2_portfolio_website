@@ -52,7 +52,7 @@
   font-family: Handjet;
   font-size: 64px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: normal;
 }
 
@@ -71,7 +71,7 @@
   font-family: Handjet;
   font-size: 128px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: normal;
 }
 
@@ -160,13 +160,13 @@
 .home-2__welcome .welcome {
   display: block;
   font-family: Handjet;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .home-2__welcome .to {
   display: block;
   font-family: Handjet;
-  font-weight: 600;
+  font-weight: 300;
   position: relative;
   left: 0;
 }
@@ -277,7 +277,7 @@
     top: 271px !important; /* Scaled: 318 * 0.852 = 271px - relative to .home-1 section */
     left: auto !important;
     font-size: 109px !important; /* Scaled: 128 * 0.852 = 109px */
-    font-weight: 600;
+    font-weight: 300 !important;
     line-height: 122px; /* Scaled: 143 * 0.852 = 122px */
     text-align: right;
     margin: 0 !important;
@@ -349,7 +349,7 @@
   }
   
   .home-2__welcome .welcome {
-    font-weight: 600;
+    font-weight: 300 !important;
     display: block;
     position: absolute !important;
     left: 88px !important; /* Scaled: 103 * 0.852 = 88px */
@@ -365,7 +365,7 @@
   /* Scaled: left 175px, top 291px */
   .home-2__welcome .to {
     font-size: 55px !important;
-    font-weight: 600;
+    font-weight: 300 !important;
     display: block;
     position: absolute !important;
     left: 175px !important; /* Scaled: 205 * 0.852 = 175px */
@@ -395,7 +395,7 @@
   /* Scaled: left 43px, top 340px */
   .home-2__welcome .land {
     font-size: 55px !important;
-    font-weight: 300;
+    font-weight: 200 !important;
     display: block;
     position: absolute !important;
     left: 43px !important; /* Scaled: 51 * 0.852 = 43px */

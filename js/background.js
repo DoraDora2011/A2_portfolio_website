@@ -135,7 +135,7 @@ let bg2Initialized = false;
 function initBackground() {
   // Initialize for home-1
   if (!bgInitialized) {
-    const container = document.getElementById("bg-canvas-hero");
+    const container = document.getElementById("bg-canvas-home-1");
     if (container && typeof p5 !== 'undefined') {
       new p5(backgroundSketch);
       bgInitialized = true;
