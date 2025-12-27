@@ -1379,7 +1379,7 @@ body {
     aspect-ratio: 191 / 84;
     object-fit: contain;
     display: block;
-    transform: rotate(90deg) scaleX(-1) translateZ(0) !important; /* Rotate 90deg + flip horizontally so feet point to text */
+    transform: rotate(90deg) scaleY(-1) translateZ(0) !important; /* Rotate 90deg + flip vertically (mirror) so feet point to text */
     transform-origin: center center;
     will-change: transform; /* Optimize transform */
   }
