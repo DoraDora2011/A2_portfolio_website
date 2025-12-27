@@ -133,7 +133,7 @@ let bgInitialized = false;
 let bg2Initialized = false;
 
 function initBackground() {
-  // Initialize for home-1
+  // Initialize for home-1 (desktop) and home-2 (mobile only)
   if (!bgInitialized) {
     const container = document.getElementById("bg-canvas-home-1");
     if (container && typeof p5 !== 'undefined') {
@@ -142,7 +142,7 @@ function initBackground() {
     }
   }
   
-  // Initialize for home-2
+  // Initialize for home-2 (mobile only - will be hidden on desktop)
   if (!bg2Initialized) {
     const container2 = document.getElementById("bg-canvas-home-2");
     if (container2 && typeof p5 !== 'undefined') {

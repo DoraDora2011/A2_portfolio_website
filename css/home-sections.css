@@ -104,13 +104,9 @@
 }
 
 /* ===== HOME SECTION 2: WELCOME TO my Vietnameseland (Left Align) ===== */
+/* Hidden on desktop, only visible on mobile */
 .home-2 {
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  display: none; /* Hidden on desktop */
 }
 
 .home-2__canvas-bg {
