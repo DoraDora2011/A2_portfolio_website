@@ -87,7 +87,7 @@
   font-size: 72px;
   color: var(--color-white);
   line-height: 1.2;
-  animation: titleColorFlicker 4s ease-in-out infinite;
+  animation: titleColorFlicker 2s ease-in-out infinite;
 }
 
 /* Subtle color change animation for title - no glow */
@@ -118,6 +118,7 @@
   opacity: 0.6;
   z-index: 1;
   animation: scrollText 30s linear infinite;
+  will-change: transform;
 }
 
 .about-hero__scrolling-text--1 {
@@ -173,16 +174,35 @@
 
 .about-me__flower {
   animation: peonyGrow 1s ease-out forwards, peonyFloat 4s ease-in-out infinite 1s;
+  transition: transform 0.3s ease;
+}
+
+.about-me__image-wrapper:hover .about-me__flower {
+  transform: rotate(29deg) rotate(5deg);
 }
 
 /* ===== ABOUT ME SECTION ===== */
 .about-me {
-  min-height: 140vh;
+  min-height: 100vh;
   padding: 100px 74px;
   position: relative;
   background: var(--color-black);
   display: flex;
   justify-content: center;
+  overflow: hidden;
+}
+
+/* p5 background sketch */
+#bg-canvas-about {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#bg-canvas-about canvas {
+  display: block;
+  opacity: 0.2;
 }
 
 .about-me__wrapper {

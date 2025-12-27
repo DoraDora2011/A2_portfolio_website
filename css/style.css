@@ -31,6 +31,19 @@
   font-weight: 400;
 }
 
+/* Make Handjet font lighter (reduce opacity) */
+.about-me__label,
+.about-me__covenant-title,
+.about-contact__title,
+.project__category,
+.project__cta-btn,
+.hero__welcome,
+.hero__name,
+.hero__title,
+.philosophy__quote p {
+  opacity: 0.8;
+}
+
 /* ===== RESET ===== */
 *, *::before, *::after {
   margin: 0;
