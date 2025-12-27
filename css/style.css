@@ -1363,10 +1363,10 @@ body {
   /* Scaled image: w: 325px, h: 143px */
   .philosophy__dragon {
     position: absolute;
-    left: 5%; /* Scaled from calc(50% - 125px) */
-    top: 351px; /* Scaled from 236px */
-    width: 193px; /* Increased: 168px * 1.15 = 193px (15% larger) */
-    height: 439px; /* Increased: 382px * 1.15 = 439px (15% larger) */
+    left: 3%; /* Reduced: 5% - 2% = 3% */
+    top: 301px; /* Reduced: 351px - 50px = 301px */
+    width: 222px; /* Increased: 193px * 1.15 = 222px (additional 15%) */
+    height: 505px; /* Increased: 439px * 1.15 = 505px (additional 15%) */
     display: flex;
     align-items: left;
     justify-content: center;
@@ -1374,8 +1374,8 @@ body {
   }
   
   .philosophy__dragon img {
-    width: 375px !important; /* Increased: 326px * 1.15 = 375px (15% larger) */
-    height: 164px !important; /* Increased: 143px * 1.15 = 164px (15% larger) */
+    width: 431px !important; /* Increased: 375px * 1.15 = 431px (additional 15%) */
+    height: 189px !important; /* Increased: 164px * 1.15 = 189px (additional 15%) */
     aspect-ratio: 191 / 84;
     object-fit: contain;
     display: block;
