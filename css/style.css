@@ -1365,8 +1365,8 @@ body {
     position: absolute;
     left: 5%; /* Scaled from calc(50% - 125px) */
     top: 351px; /* Scaled from 236px */
-    width: 168px; /* Original container width */
-    height: 382px; /* Original container height */
+    width: 193px; /* Increased: 168px * 1.15 = 193px (15% larger) */
+    height: 439px; /* Increased: 382px * 1.15 = 439px (15% larger) */
     display: flex;
     align-items: left;
     justify-content: center;
@@ -1374,8 +1374,8 @@ body {
   }
   
   .philosophy__dragon img {
-    width: 326px !important; /* Scaled: 382 * 0.852 = 326px - override desktop */
-    height: 143px !important; /* Scaled: 168 * 0.852 = 143px - override desktop */
+    width: 375px !important; /* Increased: 326px * 1.15 = 375px (15% larger) */
+    height: 164px !important; /* Increased: 143px * 1.15 = 164px (15% larger) */
     aspect-ratio: 191 / 84;
     object-fit: contain;
     display: block;
