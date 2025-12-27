@@ -369,13 +369,12 @@ line-height: normal;
 /* ===== PHILOSOPHY SECTION (HOME 2) ===== */
 .philosophy {
   min-height: 100vh;
-  padding: 100px 106px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+  display: block;
   position: relative;
   background: var(--color-black);
+  width: 100%;
+  overflow: hidden;
 }
 
 .philosophy__inner {
@@ -444,17 +443,20 @@ line-height: normal;
 }
 
 .philosophy__dragon {
-  width: 100%;
-  max-width: 1672px;
-  margin: 0 auto 60px;
-  position: relative;
-  top: 120px;
-  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 310px;
+  transform: translateX(-50%);
+  width: 1672px;
+  height: 736px;
+  z-index: 1;
+  margin: 0;
 }
 
 .philosophy__dragon img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
   transform: none; /* Default - will be overridden in mobile */
 }
 
@@ -465,46 +467,96 @@ line-height: normal;
 }
 
 .philosophy__title {
-  font-family: var(--font-pixel);
-  font-size: 96px;
-  color: var(--color-white);
-  margin-bottom: 30px;
+  position: absolute;
+  left: 106px;
+  top: 1184px;
+  font-family: Handjet;
+  font-size: 128px;
+  font-weight: 600;
+  color: #FFF;
+  margin: 0;
+  z-index: 2;
+  white-space: nowrap;
 }
 
 .philosophy__quote {
-  margin-bottom: 20px;
+  position: absolute;
+  margin: 0;
+  z-index: 2;
 }
 
-.philosophy__quote p {
-  font-family: 'Handjet', sans-serif;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  color: var(--color-white);
-  margin-bottom: 10px;
-  line-height: 1.2;
-}
-
-.philosophy__quote .mirror {
-  font-family: 'Inter', sans-serif;
-  font-size: 33px;
-  color: var(--color-cyan);
-  padding: 0 10px;
-  opacity: 0.6;
-  transform: scaleY(-1);
-  display: block;
-  filter: blur(0.8px);
-  position: relative;
-  top: -19px;
-  line-height: 1.2;
+.philosophy__quote--first {
+  left: 106px;
+  top: 1351px;
+  font-family: Handjet;
+  font-size: 64px;
+  font-weight: 500;
+  color: #FFF;
+  white-space: nowrap;
 }
 
 .philosophy__quote--second {
-  text-align: right; /* Căn giữa text */
+  left: auto;
+  right: 108px; /* 1920px - 1812px = 108px from right */
+  top: 1549px;
+  font-family: Handjet;
+  font-size: 64px;
+  font-weight: 500;
+  color: #FFF;
+  text-align: right;
+  white-space: nowrap;
 }
 
-.philosophy__quote--second .mirror {
-  color: var(--color-magenta);
+.philosophy__quote p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Desktop: Mirror elements - separate from quotes */
+.philosophy__mirror {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scaleY(-1);
+  z-index: 2;
+}
+
+.philosophy__mirror--first {
+  left: 135px;
+  top: 1409px;
+  width: 996px;
+  height: 58px;
+}
+
+.philosophy__mirror--first p {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 200;
+  color: #41d9ff;
+  margin: 0;
+  line-height: normal;
+}
+
+.philosophy__mirror--second {
+  left: auto;
+  right: 108px; /* 1920px - 1812px = 108px from right */
+  top: 1606px;
+  width: 1307px;
+  height: 65px;
+  justify-content: flex-end;
+}
+
+.philosophy__mirror--second p {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 200;
+  color: #ff71e7;
+  margin: 0;
+  line-height: normal;
+  text-align: right;
 }
 
 .philosophy__bottom {
@@ -528,30 +580,57 @@ line-height: normal;
   margin: 0 auto; /* Căn giữa màn hình */
 }
 
-.philosophy__flower {
-  width: 180px;
-  height: 180px;
-  flex-shrink: 0;
+/* Desktop: Flower elements - only apply on desktop */
+@media (min-width: 577px) {
+  .philosophy__flower {
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .philosophy__flower--left {
+    left: 124px;
+    top: 1563px;
+    width: 227px;
+    height: 232px;
+    transform: rotate(180deg);
+  }
+  
+  .philosophy__flower--right {
+    left: 1417px;
+    top: 1126px;
+    width: 280px;
+    height: 286px;
+    transform: rotate(180deg);
+  }
 }
 
 .philosophy__flower img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 0 20px rgba(255, 200, 100, 0.5));
 }
 
 .philosophy__attribution {
-  font-family: var(--font-serif);
-  font-size: 18px;
-  font-style: italic;
+  position: absolute;
+  left: auto;
+  right: 108px; /* 1920px - 1812px = 108px from right */
+  top: 1699px;
+  font-family: Handjet;
+  font-size: 24px;
+  font-weight: 500;
   color: #FFF;
   text-align: right;
-  margin-top: 20px;
+  margin: 0;
+  z-index: 2;
+  white-space: nowrap;
 }
 
 .philosophy__cta {
-  margin-top: 20px;
+  position: absolute;
+  left: 377px;
+  top: 1739px;
+  z-index: 2;
+  margin: 0;
 }
 
 .btn {
@@ -566,8 +645,24 @@ line-height: normal;
 }
 
 .btn--cream {
-  background: var(--color-cream);
-  color: var(--color-black);
+  background: #ffe7ab;
+  color: #000;
+  border-radius: 20px;
+  padding: 0;
+  width: 311px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Handjet;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.philosophy__cta .btn--cream {
+  position: relative;
+  left: 0;
+  top: 0;
 }
 
 .btn--cream:hover {

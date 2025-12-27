@@ -47,7 +47,8 @@
   position: absolute;
   left: 150px; /* calc(5% + 54px) in 1920px = 150px */
   top: 584px; /* calc(50% + 44px) in 1080px = 584px */
-  z-index: 2;
+  z-index: 3;
+  display: block !important;
 }
 
 .home-1__welcome-text {
