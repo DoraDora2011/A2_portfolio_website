@@ -1379,8 +1379,9 @@ body {
     aspect-ratio: 191 / 84;
     object-fit: contain;
     display: block;
-    transform: rotate(90deg) !important; /* Override desktop - MUST rotate 90deg */
+    transform: rotate(90deg) translateZ(0) !important; /* Override desktop + animation - MUST rotate 90deg */
     transform-origin: center center;
+    will-change: transform; /* Optimize transform */
   }
   
   /* Title "ĐỐI VỚI TÔI..." - Figma: left: 204px, top: 273px, w: 183px */
