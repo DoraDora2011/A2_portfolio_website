@@ -1289,19 +1289,48 @@ body {
     font-size: 12px;
   }
   
-  /* Hide slogans on mobile */
+  /* Keep slogans visible on mobile - adjust layout */
   .gallery-preview__slogans {
-    display: none;
+    display: flex;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
   }
   
-  /* Slider as separate section on mobile */
+  .gallery-preview__slogan-img {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    height: auto;
+    max-height: 150px;
+    width: auto;
+    max-width: 45%;
+    margin: 0;
+  }
+  
+  /* Gallery preview layout - keep together */
   .gallery-preview {
     padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .gallery-preview__lanterns {
-    max-height: 300px;
+    max-height: 200px;
     margin-bottom: 20px;
+    width: 100%;
+    object-fit: cover;
   }
   
   .gallery-preview__slider {
@@ -1314,6 +1343,7 @@ body {
     background: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
     margin: 0 20px;
+    width: calc(100% - 40px);
   }
   
   .gallery-preview__slides {
