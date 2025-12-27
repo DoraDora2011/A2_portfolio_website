@@ -94,11 +94,11 @@ const backgroundSketch = (p) => {
   }
 
   p.setup = () => {
-    const container = document.getElementById("bg-canvas-hero");
+    const container = document.getElementById("bg-canvas-home-1");
     if (!container) return;
 
     const c = p.createCanvas(p.windowWidth, p.windowHeight);
-    c.parent("bg-canvas-hero");
+    c.parent("bg-canvas-home-1");
 
     p.colorMode(p.HSB, 360, 100, 100, 100);
     p.noStroke();
@@ -118,7 +118,7 @@ const backgroundSketch = (p) => {
   };
 
   p.windowResized = () => {
-    const container = document.getElementById("bg-canvas-hero");
+    const container = document.getElementById("bg-canvas-home-1");
     if (!container) return;
 
     p.resizeCanvas(p.windowWidth, p.windowHeight);
@@ -144,11 +144,11 @@ function initBackground() {
   
   // Initialize for home-2
   if (!bg2Initialized) {
-    const container2 = document.getElementById("bg-canvas-hero-2");
+    const container2 = document.getElementById("bg-canvas-home-2");
     if (container2 && typeof p5 !== 'undefined') {
-      // Create a new sketch instance for home-2
+      // Create a new sketch instance for home-2 - use same background as home-1
       const sketch2 = (p) => {
-        // Copy all the sketch code but target bg-canvas-hero-2
+        // Use same background sketch as home-1
         let strips = [];
         let isMobile = false;
         let isTablet = false;
@@ -206,11 +206,11 @@ function initBackground() {
         }
         
         p.setup = () => {
-          const container = document.getElementById("bg-canvas-hero-2");
+          const container = document.getElementById("bg-canvas-home-2");
           if (!container) return;
           
           const c = p.createCanvas(p.windowWidth, p.windowHeight);
-          c.parent("bg-canvas-hero-2");
+          c.parent("bg-canvas-home-2");
           
           p.colorMode(p.HSB, 360, 100, 100, 100);
           p.noStroke();
@@ -229,7 +229,7 @@ function initBackground() {
         };
         
         p.windowResized = () => {
-          const container = document.getElementById("bg-canvas-hero-2");
+          const container = document.getElementById("bg-canvas-home-2");
           if (!container) return;
           
           p.resizeCanvas(p.windowWidth, p.windowHeight);
