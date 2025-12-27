@@ -272,6 +272,11 @@
 @media (max-width: 576px) {
   /* Scale factor: 375/440 = 0.852 */
   
+  /* Hide desktop welcome text on mobile */
+  .home-1__welcome-desktop {
+    display: none !important;
+  }
+  
   /* === HOME 1: DoraChann Portfolio (Right Align) === */
   /* Figma Design 78:158 - Frame: 440x956px */
   .home-1 {
