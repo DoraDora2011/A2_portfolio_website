@@ -784,9 +784,11 @@ line-height: normal;
 .footer__contact {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 30px;
   max-width: var(--max-width);
   margin: 0 auto;
+  text-align: center;
 }
 
 .footer__contact-label {
