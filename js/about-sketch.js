@@ -109,8 +109,12 @@ const createCoinSketch = (sectionSelector, canvasParentId) => {
   };
 };
 
-// Create background for About section
-new p5(createCoinSketch("#about-me", "bg-canvas-about"));
+// Create background for About section (only if container exists)
+if (document.getElementById("bg-canvas-about")) {
+  new p5(createCoinSketch("#about-me", "bg-canvas-about"));
+}
 
-// Create background for Philosophy section (same coin effect)
-new p5(createCoinSketch("#philosophy", "bg-canvas-philosophy"));
+// Create background for Philosophy section (only if container exists)
+if (document.getElementById("bg-canvas-philosophy")) {
+  new p5(createCoinSketch("#philosophy", "bg-canvas-philosophy"));
+}
