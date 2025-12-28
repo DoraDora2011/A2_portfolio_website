@@ -224,7 +224,7 @@ function initLanguageToggle() {
         }
         if (mirror1) {
           mirror1.style.left = '140px'; // Same as Quote 1
-          mirror1.style.top = '830px';
+          mirror1.style.top = '840px';
         }
         if (mirror1P) {
           mirror1P.style.fontSize = '44px'; // Increased from 24px
