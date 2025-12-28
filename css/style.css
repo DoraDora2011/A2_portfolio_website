@@ -2141,3 +2141,41 @@ body {
     font-size: 18px;
   }
 }
+
+@media (max-width: 576px) {
+
+  /* English Mobile - Quote 1: top += 20px */
+  body.lang-en .philosophy__quote--first {
+    left: 20px;
+    top: 320px;
+    /* 300 + 20 */
+  }
+
+  /* English Mobile - Mirror 1: top += 20px, font-size += 1 */
+  body.lang-en .philosophy__mirror--first {
+    top: 350px !important;
+    /* 330 + 20 */
+  }
+
+  body.lang-en .philosophy__mirror--first p {
+    font-size: 13px !important;
+    /* 12 + 1 */
+  }
+
+  /* English Mobile - Mirror 2: top += 25px, font-size += 1 */
+  body.lang-en .philosophy__mirror--second {
+    top: 476px !important;
+    /* 451 + 25 */
+  }
+
+  body.lang-en .philosophy__mirror--second p {
+    font-size: 13px !important;
+    /* 12 + 1 */
+  }
+
+  /* English Mobile - Attribution: top += 10px */
+  body.lang-en .philosophy__attribution {
+    top: 591px;
+    /* 581 + 10 */
+  }
+}
