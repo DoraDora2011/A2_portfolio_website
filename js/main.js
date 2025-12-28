@@ -164,7 +164,7 @@ function initLanguageToggle() {
     document.body.classList.add(lang === 'vi' ? 'lang-vi' : 'lang-en');
 
     if (langToggle) {
-      langToggle.title = lang === 'vi' ? 'Switch to English' : 'Chuyển sang tiếng Việt';
+      langToggle.title = lang === 'vi' ? '' : '';
     }
 
     // Update desktop positions based on language (Figma values)
@@ -203,10 +203,8 @@ function initLanguageToggle() {
           quote2.style.width = 'auto';
         }
         if (mirror2) {
-          mirror2.style.left = '1000px'; // Matches CSS absolute fix
+          // Let CSS handle mirror2 via body.lang-vi class
           mirror2.style.top = '980px';
-          mirror2.style.width = '784px';
-          mirror2.style.justifyContent = 'flex-end';
         }
         if (mirror2P) {
           mirror2P.style.fontSize = '40px';
@@ -225,11 +223,11 @@ function initLanguageToggle() {
           quote1.style.top = '780px';
         }
         if (mirror1) {
-          mirror1.style.left = '169px';
-          mirror1.style.top = '860px';
+          mirror1.style.left = '140px'; // Same as Quote 1
+          mirror1.style.top = '790px';
         }
         if (mirror1P) {
-          mirror1P.style.fontSize = '28px'; // Increased from 24px
+          mirror1P.style.fontSize = '43px'; // Increased from 24px
         }
         if (quote2) {
           // Alignment: Right aligned, fixed width to force wrap at "...is lost"
@@ -241,13 +239,8 @@ function initLanguageToggle() {
           quote2.style.width = '1200px'; // Forced width to wrap text
         }
         if (mirror2) {
-          // Mirror 2 follows Quote 2 exactly
-          mirror2.style.whiteSpace = 'normal';
-          mirror2.style.left = 'auto';
-          mirror2.style.right = '400px'; // Match Quote 2 alignment
+          // Let CSS handle mirror2 via body.lang-en class
           mirror2.style.top = '1100px';
-          mirror2.style.width = '900px'; // Match Quote 2 width
-          mirror2.style.justifyContent = 'flex-end'; // Align right
         }
         if (mirror2P) {
           mirror2P.style.fontSize = '43px'; // Increased from 24px

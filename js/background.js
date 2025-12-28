@@ -1,10 +1,12 @@
 // ===== ANIMATED BACKGROUND - Color Strips =====
 // Adapted from sketch.js - p5.js background animation
+// OPTIMIZED: Frame rate limited, visibility-based rendering
 
 const backgroundSketch = (p) => {
   let strips = [];
   let stripCount;
   let speedFactor = 3; // Slower for subtle effect
+  let isVisible = true;
 
   // Color preset - sunset theme
   const theme = {
@@ -35,21 +37,21 @@ const backgroundSketch = (p) => {
       stripBase = 28;
       stripMin = 16;
       stripMax = 40;
-      yStep = 4;
+      yStep = 6; // Increased for performance
       speedMin = 0.0005;
       speedMax = 0.0015;
     } else if (device === "tablet") {
       stripBase = 22;
       stripMin = 10;
       stripMax = 32;
-      yStep = 3;
+      yStep = 4; // Increased for performance
       speedMin = 0.0008;
       speedMax = 0.002;
     } else {
       stripBase = 18;
       stripMin = 6;
       stripMax = 28;
-      yStep = 2;
+      yStep = 3; // Slightly increased for performance
       speedMin = 0.001;
       speedMax = 0.003;
     }
@@ -85,12 +87,20 @@ const backgroundSketch = (p) => {
         let hue = theme.baseHue + p.sin(n * p.TWO_PI) * theme.hueRange;
         let sat = theme.saturation + n * 20;
         let bri = theme.brightness + p.sin(this.phase + y * 0.01) * 6;
-        let alpha = 70; // Slightly transparent
+        let alpha = 70;
 
         p.fill(hue, sat, bri, alpha);
-        p.rect(this.x, y, this.w, 3);
+        p.rect(this.x, y, this.w, yStep + 1);
       }
     }
+  }
+
+  // Check if element is in viewport
+  function checkVisibility() {
+    const container = document.getElementById("bg-canvas-home-1");
+    if (!container) return false;
+    const rect = container.getBoundingClientRect();
+    return rect.bottom > 0 && rect.top < window.innerHeight;
   }
 
   p.setup = () => {
@@ -102,6 +112,7 @@ const backgroundSketch = (p) => {
 
     p.colorMode(p.HSB, 360, 100, 100, 100);
     p.noStroke();
+    p.frameRate(24); // Limit frame rate
 
     detectDevice();
     setupByDevice();
@@ -109,7 +120,11 @@ const backgroundSketch = (p) => {
   };
 
   p.draw = () => {
-    p.background(210, 30, 95); // Light blue-gray base
+    // Only render if visible
+    isVisible = checkVisibility();
+    if (!isVisible) return;
+
+    p.background(210, 30, 95);
 
     strips.forEach(s => {
       s.update();
@@ -141,7 +156,7 @@ function initBackground() {
       bgInitialized = true;
     }
   }
-  
+
   // Initialize for home-2 (mobile only - will be hidden on desktop)
   if (!bg2Initialized) {
     const container2 = document.getElementById("bg-canvas-home-2");
@@ -151,6 +166,7 @@ function initBackground() {
         let strips = [];
         let stripCount;
         let speedFactor = 3;
+        let isVisible = true;
 
         const theme = {
           baseHue: 280,
@@ -179,21 +195,21 @@ function initBackground() {
             stripBase = 28;
             stripMin = 16;
             stripMax = 40;
-            yStep = 4;
+            yStep = 6;
             speedMin = 0.0005;
             speedMax = 0.0015;
           } else if (device === "tablet") {
             stripBase = 22;
             stripMin = 10;
             stripMax = 32;
-            yStep = 3;
+            yStep = 4;
             speedMin = 0.0008;
             speedMax = 0.002;
           } else {
             stripBase = 18;
             stripMin = 6;
             stripMax = 28;
-            yStep = 2;
+            yStep = 3;
             speedMin = 0.001;
             speedMax = 0.003;
           }
@@ -230,9 +246,16 @@ function initBackground() {
               let bri = theme.brightness + p.sin(this.phase + y * 0.01) * 6;
               let alpha = 70;
               p.fill(hue, sat, bri, alpha);
-              p.rect(this.x, y, this.w, 3);
+              p.rect(this.x, y, this.w, yStep + 1);
             }
           }
+        }
+
+        function checkVisibility() {
+          const container = document.getElementById("bg-canvas-home-2");
+          if (!container) return false;
+          const rect = container.getBoundingClientRect();
+          return rect.bottom > 0 && rect.top < window.innerHeight;
         }
 
         p.setup = () => {
@@ -244,6 +267,7 @@ function initBackground() {
 
           p.colorMode(p.HSB, 360, 100, 100, 100);
           p.noStroke();
+          p.frameRate(24);
 
           detectDevice();
           setupByDevice();
@@ -251,6 +275,9 @@ function initBackground() {
         };
 
         p.draw = () => {
+          isVisible = checkVisibility();
+          if (!isVisible) return;
+
           p.background(210, 30, 95);
           strips.forEach(s => {
             s.update();
@@ -268,7 +295,7 @@ function initBackground() {
           generateStrips();
         };
       };
-      
+
       new p5(backgroundSketch2);
       bg2Initialized = true;
     }
@@ -280,4 +307,3 @@ if (document.readyState === 'loading') {
 } else {
   initBackground();
 }
-

@@ -126,7 +126,7 @@
 
 .project__hero:hover .project__decor--bamboo {
   opacity: 0.9;
-  transform: scaleX(-1) rotate(2deg) translateX(450px);
+  transform: scaleX(-1) rotate(12deg) translateX(750px);
 }
 
 .project__decor--bamboo img {

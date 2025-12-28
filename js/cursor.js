@@ -1,8 +1,12 @@
 // ===== FLOWER CURSOR EFFECT =====
 // Adapted from sketch3.js - p5.js flower cursor
+// OPTIMIZED: Reduced redraws, throttled frame rate, cached calculations
 
 const cursorSketch = (p) => {
   let cx, cy;
+  let lastMouseX = 0, lastMouseY = 0;
+  let isMoving = false;
+  let idleFrames = 0;
 
   p.setup = () => {
     const c = p.createCanvas(p.windowWidth, p.windowHeight);
@@ -15,6 +19,9 @@ const cursorSketch = (p) => {
 
     cx = p.mouseX;
     cy = p.mouseY;
+
+    // Limit frame rate to reduce CPU usage
+    p.frameRate(30);
   };
 
   p.windowResized = () => {
@@ -22,12 +29,33 @@ const cursorSketch = (p) => {
   };
 
   p.draw = () => {
-    p.clear();
+    // Check if mouse has moved significantly
+    const dx = p.mouseX - lastMouseX;
+    const dy = p.mouseY - lastMouseY;
+    const mouseMoved = Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5;
 
-    cx = p.lerp(cx, p.mouseX, 0.75);
-    cy = p.lerp(cy, p.mouseY, 0.75);
+    if (mouseMoved) {
+      isMoving = true;
+      idleFrames = 0;
+      lastMouseX = p.mouseX;
+      lastMouseY = p.mouseY;
+    } else {
+      idleFrames++;
+      // After 10 idle frames, stop redrawing to save CPU
+      if (idleFrames > 10) {
+        isMoving = false;
+      }
+    }
 
-    drawFlower(cx, cy);
+    // Only redraw if cursor is moving or recently moved
+    if (isMoving || idleFrames <= 10) {
+      p.clear();
+
+      cx = p.lerp(cx, p.mouseX, 0.75);
+      cy = p.lerp(cy, p.mouseY, 0.75);
+
+      drawFlower(cx, cy);
+    }
   };
 
   function drawFlower(x, y) {
@@ -80,6 +108,3 @@ if (document.readyState === 'loading') {
 }
 
 window.addEventListener('resize', initFlowerCursor);
-
-
-
